@@ -20,7 +20,7 @@
     }
 </script>
 
-<style>
+<style lang="scss">
     *{
         box-sizing: border-box;
     }
@@ -39,7 +39,7 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: #FFEB3B;
+    background-color: $main-bg;
     padding: 20px 10px;
     }
 
@@ -59,12 +59,12 @@
 
     
     .b-header a:hover {
-    background-color: #FBC02D;
+    background-color: $main-bg-hover;
     color: #212121;
     }
 
     .b-header a.active {
-    background-color: #FBC02D;
+    background-color: $main-bg-hover;
     }
 
     nav {

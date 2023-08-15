@@ -11,7 +11,7 @@
         </div>
         <div class="b-catalog__items">
             <bCatalogItem
-            v-for="product in products"
+            v-for="product in this.$store.state.products"
             :key="product.article"
             v-bind:acc_data="product"
         />
@@ -21,32 +21,23 @@
 
 <script>
 import bCatalogItem from './b-catalog-item.vue';
+import { mapActions } from 'vuex';
+
 export default {
     name: 'b-catalog',
     props: {},
     data() {
-        return {
-            products: [
-                {
-                image: "1.jpg",
-                name: "T-shirt 1",
-                time: '2023-08-02T09:00:00.594Z',
-                article: "T1",
-                available: true,
-                category: "Мужские"
-                },
-                {
-                image: "2.jpg",
-                name: "T-shirt 2",
-                time: '2022-10-31T09:00:00.594Z',
-                article: "T2",
-                available: true,
-                category: "Женские"
-                }
-            ]
-        }
+        return {}
     },
     computed: {},
+    methods: {
+        ...mapActions([
+            'GET_PTODUCT_FROM_API'
+        ])
+    },
+    mounted() {
+        this.GET_PTODUCT_FROM_API()
+    },
     components: {
         bCatalogItem
     }
