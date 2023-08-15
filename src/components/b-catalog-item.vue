@@ -38,7 +38,7 @@ export default {
 
 </script>
 
-<style>
+<style lang="scss">
     .b-catalog-item{
         display: flex;
         flex-direction: row;
@@ -61,6 +61,6 @@ export default {
     }
 
     .b-catalog-item_element_btn:hover {
-        background-color:#FBC02D;
+        background-color: $main-bg;
     }
 </style>
