@@ -2,7 +2,18 @@
     <div class="b-account">
         <bAccountProfile
         :key="this.$store.state.current_account.id"
-        v-bind:acc_data="this.$store.state.current_account"
+        v-bind:account_profile_data="{
+            name: this.$store.state.current_account.name,
+            registration_date: this.$store.state.current_account.registration_date
+        }"
+        />
+        <bAccountInfo
+        :key="this.$store.state.current_account.id"
+        v-bind:account_profile_info="{
+            email: this.$store.state.current_account.email,
+            phone: this.$store.state.current_account.phone,
+            steam_id: this.$store.state.current_account.steam_id
+        }"
         />
     </div>
 </template>
@@ -11,6 +22,7 @@
 import { mapActions } from 'vuex';
 
 import bAccountProfile from './b-account-profile.vue'
+import bAccountInfo from './b-account-info.vue'
 
 export default {
     name: 'b-account',
@@ -28,7 +40,8 @@ export default {
         this.GET_CURRENT_ACCOUNTS_FROM_API(this.$route.params.id)
     },
     components: {
-        bAccountProfile
+        bAccountProfile,
+        bAccountInfo
     }
 }
 </script>

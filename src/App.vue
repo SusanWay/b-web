@@ -27,7 +27,10 @@ export default {
   color: #2c3e50;
 }
 *{
-  color: black;
+  color: white;
+}
+body{
+  background-color: #282633;
 }
 </style>
   

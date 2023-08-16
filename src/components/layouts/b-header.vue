@@ -50,21 +50,11 @@
     }
 
     .b-header a {
-    color: #212121;
+    color: white;
     padding: 12px;
     text-decoration: none;
     font-size: 18px; 
     border-radius: 4px;
-    }
-
-    
-    .b-header a:hover {
-    background-color: $main-bg-hover;
-    color: #212121;
-    }
-
-    .b-header a.active {
-    background-color: $main-bg-hover;
     }
 
     nav {

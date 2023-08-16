@@ -50,12 +50,9 @@ export default {
         color: #212121;
         text-decoration: none;
         text-align: center;
-        border: 1px solid black;
+        border: $b-li-border-bottom;
         border-radius: 4px;
         margin: 16px 0px 16px 0px;
-    }
-
-    .b-catalog-item_element_btn:hover {
-        background-color: $main-bg;
+        background-color: $main-bg-hover;
     }
 </style>
