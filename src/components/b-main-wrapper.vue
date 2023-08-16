@@ -17,7 +17,7 @@
     }
 </script>
 
-<style>
+<style lang="scss">
     .b-main-wrapper{
         display: flex;
         flex-direction: column;
@@ -27,6 +27,6 @@
     }
 
     .b-main-wrapper .container{
-        width: 1280px;
+        width: $b-container-width;
     }
 </style>

@@ -6,7 +6,7 @@
                 <p>Логин</p>
                 <p>Последняя активность</p>
                 <p>Информация</p>
-                <p>Удалить</p>
+                <p>Обмен</p>
             </div>
         </div>
         <div class="b-catalog__items">
@@ -36,7 +36,7 @@ export default {
             'GET_ACCOUNTS_FROM_API'
         ])
     },
-    mounted() {
+    mounted()   {
         this.GET_ACCOUNTS_FROM_API()
     },
     components: {
@@ -47,8 +47,8 @@ export default {
 
 <style lang="scss">
     .b-catalog{
-        width: 100%;
-        margin-top: 60px;
+        width: $b-container-width;
+        margin-top: $margin-top;
         background-color: $main-bg-light;
         padding: 30px;
         border-radius: 15px;

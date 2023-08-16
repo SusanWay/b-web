@@ -1,16 +1,16 @@
 <template>
     <div class="b-account-info">
-        <p>
-            Профиль
+        <h2>
+            Контактная информация
+        </h2>
+        <p class="b-account-li">
+            E-mail: {{ account_info.email }}
         </p>
         <p class="b-account-li">
-            E-mail: {{ account_profile_info.email }}
+            Телефон: {{ account_info.phone }}
         </p>
         <p class="b-account-li">
-            Телефон: {{ account_profile_info.phone }}
-        </p>
-        <p class="b-account-li">
-            Steam id: {{ account_profile_info.steam_id }}
+            Steam id: {{ account_info.steam_id }}
         </p>
     </div>
 </template>
@@ -21,7 +21,7 @@
 export default{
     name: 'b-account-info',
     props:{
-        account_profile_info: {
+        account_info: {
             defoult(){
                 return {}
             }
@@ -42,7 +42,6 @@ export default{
         padding: $b-account-case-padding;
         border-radius: $b-account-case-border-radius;
         background-color: $main-bg-light;
-        margin: $b-account-case-margin;
     }
 
     .b-account-li{

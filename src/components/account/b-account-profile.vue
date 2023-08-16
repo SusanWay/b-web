@@ -1,13 +1,13 @@
 <template>
     <div class="b-account-profile">
-        <p>
+        <h2>
             Профиль
+        </h2>
+        <p class="b-account-li">
+            Логин: {{ account_profile.name }}
         </p>
         <p class="b-account-li">
-            Логин: {{ account_profile_data.name }}
-        </p>
-        <p class="b-account-li">
-            Дата регистарции: {{ account_profile_data.registration_date }}
+            Дата регистарции: {{ account_profile.registration_date }}
         </p>
         <p class="b-account-li">
             Обменов: {{ trades }}
@@ -21,7 +21,7 @@
 export default{
     name: 'b-account-profile',
     props:{
-        account_profile_data: {
+        account_profile: {
             defoult(){
                 return {}
             }
@@ -42,7 +42,6 @@ export default{
         padding: $b-account-case-padding;
         border-radius: $b-account-case-border-radius;
         background-color: $main-bg-light;
-        margin: $b-account-case-margin;
     }
 
     .b-account-li{

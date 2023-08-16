@@ -11,7 +11,7 @@ const routes = [
     component: bCatalog
   },
   {
-    path: '/accaunts/:id',
+    path: '/accaunts/:id/:id_inventory',
     name: 'account',
     component: bAccount
   }

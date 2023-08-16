@@ -1,4 +1,6 @@
 export default {
     accounts: [],
-    current_account: []
+    current_account: [],
+    inventorys: [],
+    current_inventory: []
 }

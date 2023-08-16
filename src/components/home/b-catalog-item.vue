@@ -2,12 +2,12 @@
     <div class="b-catalog-item">
         <p class="b-catalog-item_element" >{{ acc_data.name }}</p>
         <p class="b-catalog-item_element" >{{ acc_data.last_activity }}</p>
-        <router-link class="b-catalog-item_element_btn" :to="'/accaunts/' + acc_data.id">
+        <router-link class="b-catalog-item_element_btn" :to="`/accaunts/${acc_data.id}/${acc_data.id_inventory}`">
             <p>
                 Подробнее
             </p>
         </router-link>
-        <a class="b-catalog-item_element_btn" href="#home"><p>Удалить</p></a>
+        <a class="b-catalog-item_element_btn" href="#home"><p>Обмен</p></a>
     </div>
 </template>
 
