@@ -1,13 +1,18 @@
 <template>
     <div class="b-catalog-item">
         <p class="b-catalog-item_element" >{{ acc_data.name }}</p>
-        <p v-if="acc_data.available == true" class="b-catalog-item_element">Предмет выпал</p>
-        <p class="b-catalog-item_element" >{{ acc_data.time }}</p>
-        <a class="b-catalog-item_element_btn" href="#home"><p>Подробнее</p></a>
+        <p class="b-catalog-item_element" >{{ acc_data.last_activity }}</p>
+        <router-link class="b-catalog-item_element_btn" :to="'/accaunts/' + acc_data.id">
+            <p>
+                Подробнее
+            </p>
+        </router-link>
+        <a class="b-catalog-item_element_btn" href="#home"><p>Удалить</p></a>
     </div>
 </template>
 
 <script>
+
 export default {
     name: 'b-catalog-item',
     props: {
@@ -19,22 +24,12 @@ export default {
         }
     },
     data() {
-        return {
-            timeToDropItem: 12,
-        }
+        return {}
     },
     methods: {
         
-    },
-    mounted() {
-        
-    },
-    computed() {
-
     }
 }
-
-
 
 </script>
 
@@ -48,7 +43,7 @@ export default {
     }
 
     .b-catalog-item_element, .b-catalog-item_element_btn {
-        width: 100px;
+        width: $b-item-width;
     }
 
     .b-catalog-item_element_btn{

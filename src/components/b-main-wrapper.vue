@@ -1,27 +1,19 @@
 <template>
     <div class="b-main-wrapper">
-        <bCatalog>
-
-        </bCatalog>
+        <div class="container">
+            <router-view/>
+        </div>
     </div>
 </template>
 
 <script>
-    import bCatalog from './b-catalog.vue';
 
     export default{
         name: 'b-main-wrapper',
         props: {},
         data() {
             return{}
-        },
-        computed: {},
-        methods: {},
-        watch: {},
-        components: {
-            bCatalog
         }
-
     }
 </script>
 
@@ -29,9 +21,12 @@
     .b-main-wrapper{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        max-width: 900px;
+        max-width: 1280px;
         margin: 0 auto;
+    }
+
+    .b-main-wrapper .container{
+        width: 1280px;
     }
 </style>

@@ -1,27 +1,28 @@
 <template>
     <div class="b-catalog">
-        <h1>Список аккаунтов</h1>
+        <h1 class="b-h1">Список аккаунтов</h1>
         <div v-if="products != []" class="b-catalog__header">
             <div class="b-catalog__header__items">
-                <p>Login</p>
-                <p>Предметов в инвентаре</p>
-                <p>Следущий через</p>
-                <p>Действия</p>
+                <p>Логин</p>
+                <p>Последняя активность</p>
+                <p>Информация</p>
+                <p>Удалить</p>
             </div>
         </div>
         <div class="b-catalog__items">
             <bCatalogItem
-            v-for="product in this.$store.state.products"
-            :key="product.article"
-            v-bind:acc_data="product"
+            v-for="account in this.$store.state.accounts"
+            :key="account.id"
+            v-bind:acc_data="account"
         />
         </div>
     </div>
 </template>
 
 <script>
-import bCatalogItem from './b-catalog-item.vue';
 import { mapActions } from 'vuex';
+
+import bCatalogItem from './b-catalog-item.vue';
 
 export default {
     name: 'b-catalog',
@@ -32,11 +33,11 @@ export default {
     computed: {},
     methods: {
         ...mapActions([
-            'GET_PTODUCT_FROM_API'
+            'GET_ACCOUNTS_FROM_API'
         ])
     },
     mounted() {
-        this.GET_PTODUCT_FROM_API()
+        this.GET_ACCOUNTS_FROM_API()
     },
     components: {
         bCatalogItem
@@ -44,9 +45,13 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
     .b-catalog{
         width: 100%;
+        margin-top: 60px;
+        background-color: $main-bg-light;
+        padding: 30px;
+        border-radius: 15px;
     }
 
     .b-catalog__items{
@@ -62,6 +67,10 @@ export default {
     }
 
     .b-catalog__header__items p{
-        width: 100px;
+        width: $b-item-width;
+    }
+
+    .b-h1{
+        text-align: center;
     }
 </style>
