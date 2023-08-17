@@ -35,11 +35,5 @@ export default {
 </script>
 
 <style lang="scss">
-    .b-trade-cart{
-        width: $b-trade-case-widht;
-        height: 700px;
-        padding: $b-account-case-padding;
-        border-radius: $b-account-case-border-radius;
-        background-color: $main-bg-light;
-    }
+
 </style>

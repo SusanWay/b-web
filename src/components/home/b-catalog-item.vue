@@ -35,23 +35,13 @@ export default {
 
 <style lang="scss">
     .b-catalog-item{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        border-bottom: $b-li-border-bottom;
         padding: 20px 0px 20px 0px;
     }
 
-    .b-catalog-item_element, .b-catalog-item_element_btn {
-        width: $b-item-width;
-    }
-
     .b-catalog-item_element_btn{
-        text-decoration: none;
-        text-align: center;
-        border: $b-li-border-bottom;
         border-radius: 4px;
         margin: 16px 0px 16px 0px;
+        border: $b-li-border-bottom;
         background-color: $main-bg-hover;
     }
 </style>

@@ -37,9 +37,6 @@ export default{
     .b-account-inventory{
         width: 100%;
         height: 450px;
-        padding: $b-account-case-padding;
-        border-radius: $b-account-case-border-radius;
-        background-color: $main-bg-light;
     }
 
 </style>

@@ -59,17 +59,6 @@ export default {
         flex-direction: column;
     }
 
-    .b-catalog__header__items{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        border-bottom: $b-li-border-bottom;
-    }
-
-    .b-catalog__header__items p{
-        width: $b-item-width;
-    }
-
     .b-h1{
         text-align: center;
     }

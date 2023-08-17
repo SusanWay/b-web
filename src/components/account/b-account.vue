@@ -56,11 +56,4 @@ export default {
 
 <style lang="scss">
 
-    .case {
-        margin-top: $margin-top;
-        display: flex;
-        justify-content: space-between;
-        width: $b-container-width;
-    }
-
 </style>

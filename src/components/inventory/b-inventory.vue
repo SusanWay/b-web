@@ -25,10 +25,7 @@
 <style lang="scss">
 
     .b-inventory{
-        display: flex;
-        flex-wrap: wrap;
-        background-color: $main-bg-inventory;
-        min-height: 340px;
+        height: 340px;
         padding: 20px;
     }
 </style>

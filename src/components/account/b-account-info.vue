@@ -37,15 +37,4 @@ export default{
 
 <style lang="scss">
 
-    .b-account-info{
-        width: $b-account-case-width;
-        padding: $b-account-case-padding;
-        border-radius: $b-account-case-border-radius;
-        background-color: $main-bg-light;
-    }
-
-    .b-account-li{
-        padding-bottom: 10px;
-        border-bottom: $b-li-border-bottom;
-    }
 </style>
