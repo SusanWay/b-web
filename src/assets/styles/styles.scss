@@ -1,5 +1,25 @@
 @import 'variables.scss';
 
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+}
+
+*{
+  color: white;
+}
+
+body{
+  background-color: #282633;
+}
+
+a{
+  text-decoration: none;
+}
+
 span{
   font-family: Inter, system-ui;
 }
