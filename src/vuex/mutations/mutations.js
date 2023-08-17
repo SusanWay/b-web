@@ -16,5 +16,13 @@ export default {
     },
     SET_ITEM_TO_CART: (state, item) => {
         state.cart.push(item)
+    },
+    DELETE_ITEM_FROM_CART: (state, item) => {
+        for(let i = 0; i < state.cart.length; i++){
+            if(state.cart[i].id_steam == item.id_steam){
+                state.cart.splice(i, 1)
+                break
+            }
+        }
     }
 }

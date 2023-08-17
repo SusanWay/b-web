@@ -8,6 +8,7 @@
             v-for="item in this.$store.state.items"
             :key="item.id_steam"
             v-bind:item="item"
+            @deleteFromCart="deleteFromCart"
             @addToCart="addToCart"
             />
         </div>
@@ -30,10 +31,14 @@ export default{
     methods: {
         ...mapActions([
             'GET_ITEMS_FROM_API',
-            'ADD_TO_CART'
+            'ADD_TO_CART',
+            'DELETE_FROM_CART'
         ]),
         addToCart(data){
             this.ADD_TO_CART(data)
+        },
+        deleteFromCart(data){
+            this.DELETE_FROM_CART(data)
         }
     },
     mounted(){

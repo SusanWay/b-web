@@ -14,9 +14,18 @@
             {{ item.price }} ₽
         </span>
         </div>
-        <a @click="addToCart">
+        <a
+        v-if="count == 0"
+        @click="addToCart">
             <p>
                 Обмен
+            </p>
+        </a>
+        <a
+        v-if="count != 0"
+        @click="deleteFromCart">
+            <p>
+                Вернуть
             </p>
         </a>
     </div>
@@ -34,12 +43,19 @@
             }
         },
         data(){
-            return {}
+            return {
+                count: 0
+                }
         },
         components:{},
         methods: {
             addToCart(){
                 this.$emit('addToCart', this.item)
+                this.count++
+            },
+            deleteFromCart(){
+                this.$emit('deleteFromCart', this.item)
+                this.count--
             }
         }
     }
