@@ -6,7 +6,7 @@
                 <p>Логин</p>
                 <p>Последняя активность</p>
                 <p>Информация</p>
-                <p>Обмен</p>
+                <p>Удалить</p>
             </div>
         </div>
         <div class="b-catalog__items">
@@ -63,7 +63,7 @@ export default {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        border-bottom: 1px solid black;
+        border-bottom: $b-li-border-bottom;
     }
 
     .b-catalog__header__items p{

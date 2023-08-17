@@ -1,5 +1,5 @@
 <template>
-    <div class="b-inventory-item">
+    <div class="b-trade-catalog-item">
         <img :src="item.img" alt="">
         <div class="b-inventory-item_info">
             <span v-if="item.type == 'case'">
@@ -14,9 +14,9 @@
             {{ item.price }} ₽
         </span>
         </div>
-        <a href="#">
+        <a @click="addToCart">
             <p>
-                market
+                Обмен
             </p>
         </a>
     </div>
@@ -24,7 +24,7 @@
 
 <script>
     export default{
-        name: 'b-inventory-item',
+        name: 'b-trade-catalog-item',
         props:{
             item: {
                 type: Object,
@@ -36,23 +36,28 @@
         data(){
             return {}
         },
-        components:{}
+        components:{},
+        methods: {
+            addToCart(){
+                this.$emit('addToCart', this.item)
+            }
+        }
     }
 </script>
 
 <style lang="scss" scoped>
 
-    .b-inventory-item{
+    .b-trade-catalog-item{
         height: 210px;
-        width: 210px;
-        margin: 0 10px;
+        width: 180px;
+        margin: $margin;
         padding: 5px;
         background-color: $main-bg-inventory-btn;
         border-radius: 5px;
     }
-    .b-inventory-item img{
+    .b-trade-catalog-item img{
         height: 120px;
-        width: 200px;
+        width: 170px;
     }
 
     span{
@@ -70,11 +75,11 @@
         margin-left: $margin * 1.5;
     }
 
-    .b-inventory-item:hover{
+    .b-trade-catalog-item:hover{
         background-color: $main-bg-inventory-btn-hover;
     }
 
-    .b-inventory-item a p{
+    .b-trade-catalog-item a p{
         text-decoration: none;
         text-align: center;
         background-color: $main-bg-inventory-btn-hover;
@@ -84,11 +89,15 @@
         padding: $padding * 0.25;
     }
 
-    .b-inventory-item:hover a p{
+    .b-trade-catalog-item:hover a p{
         background-color: $main-bg-hover;
     }
 
-    .b-inventory-item a p:hover{
+    .b-trade-catalog-item a p:hover{
         background-color: #aba0e7;
+    }
+
+    .b-trade-catalog-item a{
+        cursor: pointer;
     }
 </style>

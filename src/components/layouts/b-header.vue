@@ -4,6 +4,11 @@
         <a href="#logo" class="logo">Логотип сайта</a>
         </div>
         <nav>
+            <router-link :to="'/trade'">
+            <p>
+                Обмен
+            </p>
+            </router-link>
             <a class="active" href="#home">Главная</a>
             <a href="#contact">Контакты</a>
             <a href="#about">О нас</a>

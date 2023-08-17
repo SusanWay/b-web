@@ -7,7 +7,7 @@
                 Подробнее
             </p>
         </router-link>
-        <a class="b-catalog-item_element_btn" href="#home"><p>Обмен</p></a>
+        <a class="b-catalog-item_element_btn" href="#home"><p>Удалить</p></a>
     </div>
 </template>
 
@@ -38,7 +38,7 @@ export default {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        border-bottom: 1px solid black;
+        border-bottom: $b-li-border-bottom;
         padding: 20px 0px 20px 0px;
     }
 
@@ -47,7 +47,6 @@ export default {
     }
 
     .b-catalog-item_element_btn{
-        color: #212121;
         text-decoration: none;
         text-align: center;
         border: $b-li-border-bottom;

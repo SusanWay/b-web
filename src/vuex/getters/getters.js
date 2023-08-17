@@ -10,5 +10,11 @@ export default {
     },
     CURRENT_INVENTORY(state){
         return state.current_inventory
+    },
+    ITEMS(state){
+        return state.items
+    },
+    CART(state){
+        return state.cart
     }
 }

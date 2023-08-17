@@ -32,5 +32,10 @@ export default {
 body{
   background-color: #282633;
 }
+
+a{
+  text-decoration: none;
+}
+
 </style>
   

@@ -29,7 +29,7 @@ export default {
     },
     GET_INVENTORYS_FROM_API({commit}){
         return axios.get(
-            'http://localhost:3000/inventorys/'
+            'http://localhost:3000/inventorys'
             )
             .then((inventorys) =>{
                 commit('SET_INVENTORYS_TO_STATE', inventorys.data)
@@ -47,6 +47,27 @@ export default {
             .then((inventory) =>{
                 commit('SET_CURRENT_INVENTORY_TO_STATE', inventory.data)
                 return inventory
+            })
+            .catch((error) =>{
+                console.log(error)
+                return error
+            })
+    },
+    GET_ITEMS_FROM_API({commit}){
+        return axios.get(
+            'http://localhost:3000/inventorys'
+            )
+            .then((inventorys) =>{
+                let items = {}
+                let count = 0;
+                for (let num_of_obj = 0; num_of_obj < inventorys.data.length; num_of_obj++){
+                    for(let num_of_item = 0; num_of_item < inventorys.data[num_of_obj].items.length; num_of_item++){
+                        items[count] = inventorys.data[num_of_obj].items[num_of_item]
+                        count++
+                    }
+                }
+                commit('SET_ITEMS_TO_STATE', items)
+                return inventorys
             })
             .catch((error) =>{
                 console.log(error)

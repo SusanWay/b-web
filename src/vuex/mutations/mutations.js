@@ -10,5 +10,11 @@ export default {
     },
     SET_CURRENT_INVENTORY_TO_STATE: (state, inventory) => {
         state.current_inventory = inventory
+    },
+    SET_ITEMS_TO_STATE: (state, items) => {
+        state.items = items
+    },
+    SET_ITEM_TO_CART: (state, item) => {
+        state.cart.push(item)
     }
 }
