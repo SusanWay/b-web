@@ -1,7 +1,7 @@
 <template>
     <div class="b-inventory">
         <bInventoryItem
-        v-for="item in this.$store.state.current_inventory.items"
+        v-for="item in this.$store.state.currentInventory.items"
         :key="item.id_steam"
         v-bind:item="item"
         />
@@ -25,6 +25,7 @@
 <style lang="scss">
 
     .b-inventory{
+        width: $b-container-width;
         height: 340px;
         padding: 20px;
     }

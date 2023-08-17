@@ -4,10 +4,10 @@
             Профиль
         </h2>
         <p class="b-account-li">
-            Логин: {{ account_profile.name }}
+            Логин: {{ accountProfile.name }}
         </p>
         <p class="b-account-li">
-            Дата регистарции: {{ account_profile.registration_date }}
+            Дата регистарции: {{ accountProfile.registrationDate }}
         </p>
         <p class="b-account-li">
             Обменов: {{ trades }}
@@ -21,7 +21,7 @@
 export default{
     name: 'b-account-profile',
     props:{
-        account_profile: {
+        accountProfile: {
             defoult(){
                 return {}
             }

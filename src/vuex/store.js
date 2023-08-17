@@ -1,20 +1,24 @@
 import { createStore } from "vuex";
 
+// Импортируем модули с определениями состояния, мутаций, действий и геттеров
 import state from "./state/state";
 import mutations from "./mutations/mutations";
 import commonActions from './actions/actions'
 import apiRequests from "./actions/api-requests";
 import getters from "./getters/getters";
 
-const actions = {...commonActions,...apiRequests}
+// Объединяем общие действия и действия для API запросов
+const actions = {...commonActions, ...apiRequests}
 
-let store = createStore(
-    {
-        state,
-        mutations,
-        actions,
-        getters
-    }
-)
+// Создаем хранилище Vuex с переданными модулями
+const store = createStore({
+    state,       // Состояние приложения
+    mutations,   // Мутации для изменения состояния
+    actions,     // Действия, которые могут вызывать мутации
+    getters      // Геттеры для получения данных из состояния
+})
 
 export default store;
+
+
+

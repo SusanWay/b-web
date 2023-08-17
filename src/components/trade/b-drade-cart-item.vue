@@ -9,7 +9,7 @@
             </span>
             <span v-if="item.type == 'case'">
                 <p>
-                    Кол-во: {{ item.quantitu }}
+                    Кол-во: {{ item.quantity }}
                 </p>
             </span>
             <span v-if="item.type == 'veapone'">

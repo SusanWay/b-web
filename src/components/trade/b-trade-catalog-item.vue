@@ -14,38 +14,13 @@
                 {{ item.price }} ₽
             </span>
         </div>
-        <a
-        class="standart-btn"
-        v-if="count == 0"
-        @click="addToCart">
-            <p>
-                Обмен
-            </p>
+        <a class="standart-btn" v-if="count === 0" @click="addToCart">
+            <p>Обмен</p>
         </a>
-        <a
-        class="standart-btn"
-        v-if="count != 0 && item.type == 'veapone'"
-        @click="deleteFromCart">
-            <p>
-                Вернуть
-            </p>
+        <a class="standart-btn" v-else-if="count !== 0 && item.type === 'veapone'" @click="deleteFromCart">
+            <p>Вернуть</p>
         </a>
-        <div v-if="count !=0 && count < item.count  && item.type == 'case'" class="multu-сhoice">
-            <a @click="deleteFromCart">
-                <p>
-                    --
-                </p>
-            </a>
-            <span>
-                <p> {{ count }}</p>
-            </span>
-            <a @click="addToCart">
-                <p>
-                    +
-                </p>
-            </a>
-        </div>
-        <div v-if="count == item.count && item.type == 'case'" class="multu-сhoice">
+        <div v-else-if="count === item.count && item.type === 'case'" class="multu-сhoice">
             <a @click="deleteFromCart">
                 <p>
                     --
@@ -55,6 +30,19 @@
                 <p> {{ count }}</p>
             </span>
             <a class="disablend">
+                <p>
+                    +
+                </p>
+            </a>
+        </div>
+        <div v-else-if="count !== 0 && item.type === 'case'" class="multu-сhoice">
+            <a @click="deleteFromCart">
+                <p>--</p>
+            </a>
+            <span>
+                <p> {{ count }} </p>
+            </span>
+            <a @click="addToCart">
                 <p>
                     +
                 </p>

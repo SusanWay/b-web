@@ -21,7 +21,6 @@ import bTradeCatalogItem from './b-trade-catalog-item.vue'
 
 export default{
     name: 'b-trade-catalog',
-    props:{},
     data(){
         return {}
     },

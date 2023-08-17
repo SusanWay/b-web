@@ -1,8 +1,8 @@
 export default {
     accounts: [],
-    current_account: [],
+    currentAccount: [],
     inventorys: [],
-    current_inventory: [],
+    currentInventory: [],
     items: [],
     cart: []
 }

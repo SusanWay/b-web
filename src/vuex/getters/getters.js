@@ -1,20 +1,19 @@
 export default {
-    ACCOUNTS(state){
-        return state.accounts
-    },
-    CURRENT_ACCOUNT(state){
-        return state.current_account
-    },
-    INVENTORYS(state){
-        return state.inventorys
-    },
-    CURRENT_INVENTORY(state){
-        return state.current_inventory
-    },
-    ITEMS(state){
-        return state.items
-    },
-    CART(state){
-        return state.cart
-    }
-}
+    // Геттер для получения списка аккаунтов
+    ACCOUNTS: state => state.accounts,
+  
+    // Геттер для получения текущего аккаунта
+    CURRENT_ACCOUNT: state => state.current_account,
+  
+    // Геттер для получения списка инвентарей
+    INVENTORIES: state => state.inventorys,
+  
+    // Геттер для получения текущего инвентаря
+    CURRENT_INVENTORY: state => state.current_inventory,
+  
+    // Геттер для получения списка предметов
+    ITEMS: state => state.items,
+  
+    // Геттер для получения корзины
+    CART: state => state.cart
+  };

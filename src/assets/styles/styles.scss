@@ -38,7 +38,10 @@ span{
   border-bottom: $b-li-border-bottom;
 }
 
-.b-trade-cart, .b-trade-catalog, .b-account-info, .b-account-inventory, .b-account-profile{
+.b-trade-cart, 
+.b-trade-catalog, 
+.b-account-info, 
+.b-account-inventory, .b-account-profile{
   padding: $b-account-case-padding;
   border-radius: $b-account-case-border-radius;
   background-color: $main-bg-light;
@@ -74,61 +77,86 @@ span{
   background-color: #555;
 }
 
-.b-trade-cart-item, .b-trade-catalog-item{
+.b-trade-cart-item, 
+.b-trade-catalog-item{
   height: 210px;
   width: 180px;
   margin: $margin;
 }
 
-.b-trade-cart-item, .b-trade-catalog-item, .b-inventory-item{
+.b-trade-cart-item, 
+.b-trade-catalog-item, 
+.b-inventory-item{
   padding: 5px;
   background-color: $main-bg-inventory-btn;
   border-radius: 5px;
 }
 
-.b-trade-cart-item img, .b-trade-catalog-item img{
+.b-trade-cart-item img, 
+.b-trade-catalog-item img{
   width: 170px;
 }
 
-.b-trade-cart-item img, .b-trade-catalog-item img, .b-inventory-item img{
+.b-trade-cart-item img, 
+.b-trade-catalog-item img, 
+.b-inventory-item img{
   height: 120px;
 }
 
-.b-trade-cart-item_info span , .b-inventory-item_info span {
+.b-trade-cart-item_info span, 
+.b-inventory-item_info span {
   font-size: $b-inventory-info-font-size;
   text-align: center;
 }
 
-.b-trade-cart-item_info span p, .b-inventory-item_info span{
+.b-trade-cart-item_info span p, 
+.b-inventory-item_info span{
   color: $b-inventory-info-color;
 }
 
-.b-inventory-item_price span, .b-trade-cart-item_price span, .b-trade-cart-item_info span {
+.b-inventory-item_price span, 
+.b-trade-cart-item_price span, 
+.b-trade-cart-item_info span {
   font-size: 13px;
 }
 
-.b-trade-cart-item_info span, .b-trade-cart-item_price span{
+.b-trade-cart-item_info span, 
+.b-trade-cart-item_price span{
   text-align: center;
 }
 
-.b-trade-cart-item_info span p, .b-trade-cart-item_price span p{
+.b-trade-cart-item_info span p, 
+.b-trade-cart-item_price span p{
   margin: 5px;
 }
 
-.b-trade-cart-item_info, .b-trade-cart-item_price, .b-trade-catalog-item_info, .b-trade-catalog-item_price, .b-inventory-item_info, .b-inventory-item_price{
-        margin-left: $margin * 1.5;
+.b-trade-cart-item_info, 
+.b-trade-cart-item_price, 
+.b-trade-catalog-item_info, 
+.b-trade-catalog-item_price, 
+.b-inventory-item_info, 
+.b-inventory-item_price{
+  margin-left: $margin * 1.5;
 }
 
-.b-trade-cart-item:hover, .b-trade-catalog-item:hover, .b-inventory-item:hover{
+.b-trade-cart-item:hover, 
+.b-trade-catalog-item:hover, 
+.b-inventory-item:hover{
   background-color: $main-bg-inventory-btn-hover;
 }
 
-.b-trade-cart-item a p, .b-trade-catalog-item a p, .b-inventory-item a p, .b-catalog-item_element_btn, .b-trade-item_element_btn p{
+.b-trade-cart-item a p, 
+.b-trade-catalog-item a p, 
+.b-inventory-item a p, 
+.b-catalog-item_element_btn, 
+.b-trade-item_element_btn p{
   text-decoration: none;
   text-align: center;
 }
 
-.b-trade-cart-item a p, .b-trade-catalog-item a p, .b-inventory-item a p{
+.b-trade-cart-item a p, 
+.b-trade-catalog-item a p, 
+.b-inventory-item a p{
   border-radius: 5px;
   background-color: $main-bg-inventory-btn-hover;
   font-size: 16px;
@@ -136,15 +164,20 @@ span{
   padding: $padding * 0.25; 
 }
 
-.b-trade-cart-item:hover a p, .b-trade-catalog-item:hover a p, .b-inventory-item:hover a p{
+.b-trade-cart-item:hover a p, 
+.b-trade-catalog-item:hover a p, 
+.b-inventory-item:hover a p{
   background-color: $main-bg-hover;
 }
 
-.b-trade-cart-item a p:hover, .b-trade-catalog-item a p:hover, .b-inventory-item a p:hover{
+.b-trade-cart-item a p:hover, 
+.b-trade-catalog-item a p:hover, 
+.b-inventory-item a p:hover{
   background-color: #aba0e7;
 }
 
-.b-trade-catalog-item a, .b-trade-catalog-item a{
+.b-trade-catalog-item a, 
+.b-trade-catalog-item a{
   cursor: pointer;
 }
 
@@ -156,11 +189,14 @@ span{
   width: $b-container-width;
 }
 
-.b-catalog__header__items p, .b-catalog-item_element, .b-catalog-item_element_btn{
+.b-catalog__header__items p, 
+.b-catalog-item_element, 
+.b-catalog-item_element_btn{
   width: $b-item-width;
 }
 
-.b-catalog-item, .b-catalog__header__items{
+.b-catalog-item, 
+.b-catalog__header__items{
   display: flex;
   flex-direction: row;
   justify-content: space-between;

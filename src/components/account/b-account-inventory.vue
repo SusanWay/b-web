@@ -35,7 +35,6 @@ export default{
 <style lang="scss">
 
     .b-account-inventory{
-        width: 100%;
         height: 450px;
     }
 

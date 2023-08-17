@@ -4,13 +4,13 @@
             Контактная информация
         </h2>
         <p class="b-account-li">
-            E-mail: {{ account_info.email }}
+            E-mail: {{ accountInfo.email }}
         </p>
         <p class="b-account-li">
-            Телефон: {{ account_info.phone }}
+            Телефон: {{ accountInfo.phone }}
         </p>
         <p class="b-account-li">
-            Steam id: {{ account_info.steam_id }}
+            Steam id: {{ accountInfo.steamId }}
         </p>
     </div>
 </template>
@@ -21,7 +21,7 @@
 export default{
     name: 'b-account-info',
     props:{
-        account_info: {
+        accountInfo: {
             defoult(){
                 return {}
             }
