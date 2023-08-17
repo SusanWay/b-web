@@ -2,23 +2,29 @@
     <div class="b-trade-cart-item">
         <img :src="item.img" alt="">
         <div class="b-trade-cart-item_info">
+            <span>
+                <p>
+                    {{ item.name }}
+                </p>
+            </span>
             <span v-if="item.type == 'case'">
-                Кол-во: {{ item.count }}
+                <p>
+                    Кол-во: {{ item.quantitu }}
+                </p>
             </span>
             <span v-if="item.type == 'veapone'">
-                {{ item.float }}
+                <p>
+                    {{ item.float }}
+                </p>
             </span>
         </div>
         <div class="b-trade-cart-item_price">
-            <span> 
-            {{ item.price }} ₽
-        </span>
+            <span>
+                <p>
+                    {{ item.price }} ₽
+                </p>
+            </span>
         </div>
-        <a @click="addToCart">
-            <p>
-                Обмен
-            </p>
-        </a>
     </div>
 </template>
 

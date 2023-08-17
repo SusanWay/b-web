@@ -16,6 +16,7 @@
 <script>
 import { mapGetters } from 'vuex';
 import bTradeCartItem from './b-drade-cart-item.vue'
+
 export default {
     name: 'b-trade-cart',
     props: {},

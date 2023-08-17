@@ -11,10 +11,11 @@
         </div>
         <div class="b-trade-catalog-item_price">
             <span> 
-            {{ item.price }} ₽
-        </span>
+                {{ item.price }} ₽
+            </span>
         </div>
         <a
+        class="standart-btn"
         v-if="count == 0"
         @click="addToCart">
             <p>
@@ -22,12 +23,43 @@
             </p>
         </a>
         <a
-        v-if="count != 0"
+        class="standart-btn"
+        v-if="count != 0 && item.type == 'veapone'"
         @click="deleteFromCart">
             <p>
                 Вернуть
             </p>
         </a>
+        <div v-if="count !=0 && count < item.count  && item.type == 'case'" class="multu-сhoice">
+            <a @click="deleteFromCart">
+                <p>
+                    --
+                </p>
+            </a>
+            <span>
+                <p> {{ count }}</p>
+            </span>
+            <a @click="addToCart">
+                <p>
+                    +
+                </p>
+            </a>
+        </div>
+        <div v-if="count == item.count && item.type == 'case'" class="multu-сhoice">
+            <a @click="deleteFromCart">
+                <p>
+                    --
+                </p>
+            </a>
+            <span>
+                <p> {{ count }}</p>
+            </span>
+            <a class="disablend">
+                <p>
+                    +
+                </p>
+            </a>
+        </div>
     </div>
 </template>
 
@@ -61,6 +93,26 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.multu-сhoice{
+    display: flex;
+    justify-content: space-between;
+}
 
+.multu-сhoice a p {
+    width: 22px;
+    padding: auto; 
+}
+.multu-сhoice p {
+    margin: $margin $margin * 1.5;
+}
+
+.multu-сhoice .disablend p {
+    background-color: $main-bg-inventory;
+}
+
+.b-trade-catalog-item:hover .multu-сhoice .disablend p {
+    background-color: $main-bg-inventory;
+    cursor: not-allowed;
+}
 </style>

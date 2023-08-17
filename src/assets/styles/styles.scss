@@ -74,13 +74,25 @@ span{
   height: 120px;
 }
 
-.b-trade-cart-item span , .b-inventory-item_info span {
+.b-trade-cart-item_info span , .b-inventory-item_info span {
   font-size: $b-inventory-info-font-size;
+  text-align: center;
+}
+
+.b-trade-cart-item_info span p, .b-inventory-item_info span{
   color: $b-inventory-info-color;
 }
 
-.b-trade-cart-item span, .b-inventory-item_price span {
+.b-inventory-item_price span, .b-trade-cart-item_price span, .b-trade-cart-item_info span {
   font-size: 13px;
+}
+
+.b-trade-cart-item_info span, .b-trade-cart-item_price span{
+  text-align: center;
+}
+
+.b-trade-cart-item_info span p, .b-trade-cart-item_price span p{
+  margin: 5px;
 }
 
 .b-trade-cart-item_info, .b-trade-cart-item_price, .b-trade-catalog-item_info, .b-trade-catalog-item_price, .b-inventory-item_info, .b-inventory-item_price{
@@ -91,7 +103,7 @@ span{
   background-color: $main-bg-inventory-btn-hover;
 }
 
-.b-trade-cart-item a p, .b-trade-catalog-item a p, .b-inventory-item a p, .b-catalog-item_element_btn{
+.b-trade-cart-item a p, .b-trade-catalog-item a p, .b-inventory-item a p, .b-catalog-item_element_btn, .b-trade-item_element_btn p{
   text-decoration: none;
   text-align: center;
 }
