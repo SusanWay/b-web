@@ -10,7 +10,7 @@ export default {
       commit('SET_ACCOUNTS_TO_STATE', response.data);
       return response;
     } catch (error) {
-      console.error(error); // Обратите внимание на исправленное "console.error" вместо "console.err"
+      console.error(error);
       throw error;
     }
   },

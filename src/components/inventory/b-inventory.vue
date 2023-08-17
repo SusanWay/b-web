@@ -12,7 +12,6 @@
     import bInventoryItem from './b-inventory-item.vue';
     export default{
         name: 'b-inventory',
-        props:{},
         data(){
             return {}
         },
@@ -23,7 +22,6 @@
 </script>
 
 <style lang="scss">
-
     .b-inventory{
         width: $b-container-width;
         height: 340px;

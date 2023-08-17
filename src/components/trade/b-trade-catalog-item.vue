@@ -67,7 +67,6 @@
                 count: 0
                 }
         },
-        components:{},
         methods: {
             addToCart(){
                 this.$emit('addToCart', this.item)

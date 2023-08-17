@@ -16,8 +16,6 @@
 </template>
 
 <script>
-
-
 export default{
     name: 'b-account-profile',
     props:{
@@ -36,5 +34,4 @@ export default{
 </script>
 
 <style lang="scss">
-
 </style>

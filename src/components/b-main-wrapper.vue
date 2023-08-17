@@ -7,14 +7,12 @@
 </template>
 
 <script>
-
-    export default{
-        name: 'b-main-wrapper',
-        props: {},
-        data() {
-            return{}
-        }
+export default{
+    name: 'b-main-wrapper',
+    data() {
+        return{}
     }
+}
 </script>
 
 <style lang="scss">

@@ -19,11 +19,9 @@ import bTradeCartItem from './b-drade-cart-item.vue'
 
 export default {
     name: 'b-trade-cart',
-    props: {},
     data() {
         return {}
     },
-    computed: {},
     methods: {
         ...mapGetters([
             'CART'

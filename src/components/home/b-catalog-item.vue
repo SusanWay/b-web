@@ -12,7 +12,6 @@
 </template>
 
 <script>
-
 export default {
     name: 'b-catalog-item',
     props: {
@@ -25,12 +24,8 @@ export default {
     },
     data() {
         return {}
-    },
-    methods: {
-        
     }
 }
-
 </script>
 
 <style lang="scss">

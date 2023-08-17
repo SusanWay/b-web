@@ -16,8 +16,6 @@
 </template>
 
 <script>
-
-
 export default{
     name: 'b-account-info',
     props:{
@@ -28,13 +26,10 @@ export default{
         }
     },
     data(){
-        return {
-            trades: 0
-        }
+        return {}
     }
 }
 </script>
 
 <style lang="scss">
-
 </style>

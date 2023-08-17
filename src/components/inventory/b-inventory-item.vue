@@ -35,18 +35,17 @@
         },
         data(){
             return {}
-        },
-        components:{}
+        }
     }
 </script>
 
 <style lang="scss" scoped>
-
     .b-inventory-item{
         height: 210px;
         width: 210px;
         margin: 0 10px;
     }
+    
     .b-inventory-item img{
         width: 200px;
     }

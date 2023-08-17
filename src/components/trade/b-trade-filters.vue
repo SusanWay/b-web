@@ -7,13 +7,8 @@
 <script>
 export default {
     name: 'b-trade-filters',
-    props: {},
     data() {
         return {}
-    },
-    computed: {},
-    methods: {},
-    components: {
     }
 }
 </script>

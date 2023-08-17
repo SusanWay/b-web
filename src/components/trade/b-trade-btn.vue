@@ -9,8 +9,6 @@
 </template>
 
 <script>
-
-
 export default {
     name: 'b-trade-btn',
     data() {
@@ -18,10 +16,7 @@ export default {
             items: 0,
             total: 0
         }
-    },
-    methods: {
-    },
-    mounted() {}
+    }
 }
 </script>
 

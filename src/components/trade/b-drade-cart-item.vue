@@ -42,7 +42,6 @@
         data(){
             return {}
         },
-        components:{},
         methods: {
             addToCart(){
                 this.$emit('addToCart', this.item)

@@ -21,7 +21,6 @@
 
 <script>
 import { mapActions } from 'vuex';
-
 import bCatalogItem from './b-catalog-item.vue';
 
 export default {
@@ -30,7 +29,6 @@ export default {
     data() {
         return {}
     },
-    computed: {},
     methods: {
         ...mapActions([
             'GET_ACCOUNTS_FROM_API'

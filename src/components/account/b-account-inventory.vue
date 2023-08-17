@@ -22,9 +22,7 @@ export default{
         }
     },
     data(){
-        return {
-            trades: 0
-        }
+        return {}
     },
     components: {
         bInventory
@@ -33,9 +31,7 @@ export default{
 </script>
 
 <style lang="scss">
-
     .b-account-inventory{
         height: 450px;
     }
-
 </style>
