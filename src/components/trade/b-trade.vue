@@ -3,9 +3,15 @@
         <bTradeCart/>
         <div>
             <bTradeBtn/>
-            <bTradeFilters/>
+            <bTradeFilters
+                :itemType="itemType"
+                :selectedType="selectedType"
+                @sortByType="sortByType"
+            />
         </div>
-        <bCatalog/>
+        <bCatalog
+        :selectedType="selectedType"
+        />
     </div>
 </template>
 
@@ -18,14 +24,26 @@ import bCatalog from './b-trade-catalog.vue'
 export default {
     name: 'b-trade',
     data() {
-        return {}
+        return {
+          itemType: [
+            {name: 'Все', value: 'ALL'},
+            {name: 'Кейсы', value: 'case'},
+            {name: 'Оружие', value: 'weapon'}
+          ],
+          selectedType: 'ALL',
+        }
     },
     components: {
         bTradeCart,
         bTradeBtn,
         bTradeFilters,
         bCatalog
+    },
+  methods: {
+    sortByType(type){
+      this.selectedType = type
     }
+  }
 }
 </script>
 

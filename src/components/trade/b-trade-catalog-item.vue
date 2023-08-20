@@ -5,7 +5,7 @@
             <span v-if="item.type == 'case'">
                 Кол-во: {{ item.count }}
             </span>
-            <span v-if="item.type == 'veapone'">
+            <span v-if="item.type == 'weapon'">
                 {{ item.float }}
             </span>
         </div>
@@ -14,20 +14,20 @@
                 {{ item.cost }} ₽
             </span>
         </div>
-        <a class="standart-btn" v-if="count === 0" @click="addToCart">
+        <a class="standart-btn" v-if="itemCount === 0" @click="addToCart">
             <p>Обмен</p>
         </a>
-        <a class="standart-btn" v-else-if="count !== 0 && item.type === 'veapone'" @click="deleteFromCart">
+        <a class="standart-btn" v-else-if="itemCount !== 0 && item.type === 'weapon'" @click="deleteFromCart">
             <p>Вернуть</p>
         </a>
-        <div v-else-if="count === item.count && item.type === 'case'" class="multu-сhoice">
+        <div v-else-if="itemCount === item.count && item.type === 'case'" class="multu-сhoice">
             <a @click="deleteFromCart">
                 <p>
                     --
                 </p>
             </a>
             <span>
-                <p> {{ count }}</p>
+                <p> {{ itemCount }}</p>
             </span>
             <a class="disablend">
                 <p>
@@ -35,12 +35,12 @@
                 </p>
             </a>
         </div>
-        <div v-else-if="count !== 0 && item.type === 'case'" class="multu-сhoice">
+        <div v-else-if="itemCount !== 0 && item.type === 'case'" class="multu-сhoice">
             <a @click="deleteFromCart">
                 <p>--</p>
             </a>
             <span>
-                <p> {{ count }} </p>
+                <p> {{ itemCount }} </p>
             </span>
             <a @click="addToCart">
                 <p>
@@ -52,31 +52,51 @@
 </template>
 
 <script>
+    import {mapGetters} from "vuex";
+
     export default{
         name: 'b-trade-catalog-item',
         props:{
             item: {
-                type: Object,
-                default(){
-                    return {}
-                }
+              type: Object,
+              default() {
+                return {}
+              }
             }
         },
         data(){
             return {
-                count: 0
-                }
+              count: 0
+            }
         },
         methods: {
             addToCart(){
                 this.$emit('addToCart', this.item)
-                this.count++
             },
             deleteFromCart(){
                 this.$emit('deleteFromCart', this.item)
-                this.count--
+            },
+          ...mapGetters([
+              'ITEMS',
+              "CART",
+              'QUANTITY_ITEM'
+          ])
+        },
+      computed: {
+          itemCount(){
+            if(!this.ITEMS().length){
+              return 0
             }
-        }
+            const existingItemIndex = this.CART().findIndex(cartItem => cartItem.id_steam === this.item.id_steam);
+
+            if (existingItemIndex !== -1) {
+              console.log(2, this.CART()[existingItemIndex].quantity, this.CART())
+              return this.CART()[existingItemIndex].quantity
+            }
+            console.log(3)
+            return 0
+          }
+      }
     }
 </script>
 
@@ -88,7 +108,7 @@
 
 .multu-сhoice a p {
     width: 22px;
-    padding: auto; 
+    padding: auto;
 }
 .multu-сhoice p {
     margin: $margin $margin * 1.5;
