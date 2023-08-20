@@ -21,7 +21,7 @@
         <div class="b-trade-cart-item_price">
             <span>
                 <p>
-                    {{ item.price }} ₽
+                    {{ item.cost }} ₽
                 </p>
             </span>
         </div>

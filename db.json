@@ -41,14 +41,14 @@
           "type": "case",
           "name": "2020 RMR Contenders",
           "count": 12,
-          "price": 34.82,
+          "cost": 34.82,
           "img": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsQEl9Jg9SpIW1KgRr7OHFY28SvoyJl4-Fg_L6N77DhSUFsccgie-W9Nqj3gblqhA_NWyiLIfDclA_YFjU_1a7yOfmhcO9vpvA1zI97X4HoaIB"
         },
         {
           "id_steam": 2,
           "type": "veapone",
           "name": "Drift Wood",
-          "price": 2.92,
+          "cost": 2.92,
           "float": 0.49539887,
           "img": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpos7asPwJfwOP3dS9b08u5m4S0n_L1JaKfw20BuMR1jrjAodSk21Dg80JpMDr1dtWQdldrN1jW_wPtl-fq1pO7uoOJlyW7W3BBXg"
         }
@@ -62,7 +62,7 @@
           "id_steam": 3,
           "type": "veapone",
           "name": "Gamma Doppler Emerald",
-          "price": 2185312.79,
+          "cost": 2185312.79,
           "float": 0.02853382,
           "img": "https://s1.cs.money/98b6b06302e6908a4012b0ba9d7be9ad_large_preview.png"
         },
@@ -70,7 +70,7 @@
           "id_steam": 4,
           "type": "veapone",
           "name": "Medusa",
-          "price": 435057.65,
+          "cost": 435057.65,
           "float": 0.11654694,
           "img": "https://s1.cs.money/45bef46fa2d94d16def4468e2133a0b3_large_preview.png"
         }
@@ -85,7 +85,7 @@
           "type": "case",
           "name": "Antwerp 2022 Challengers Autograph Capsule",
           "count": 30,
-          "price": 59.54,
+          "cost": 59.54,
           "img": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsQEl9Jg9SpIW1KgRr7PLGZSpH_szkxNLZqPDmPK7BqWhZ6cl9j-fG8J7mxlK1-ks_Zz32I4GdJlJrY1HX-wDrlO3v05e87pmfyXVrvCAj43bemhapwUYbHWM7HMY"
         },
         {
@@ -93,7 +93,7 @@
           "type": "case",
           "name": "StatTrak™ Swap Tool",
           "count": 7,
-          "price": 45.59,
+          "cost": 45.59,
           "img": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXX7gNTPcUhvRpJWF7RTNu-wM7DbEl7KggZs--nLV4ygaDNJztE7ozgzNGIwqTyZ-6AlGpV7Jx10uiQotym2g3k_l0sPT6xjsLSww"
         }
       ]

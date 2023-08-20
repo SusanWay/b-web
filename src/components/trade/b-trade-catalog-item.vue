@@ -11,7 +11,7 @@
         </div>
         <div class="b-trade-catalog-item_price">
             <span> 
-                {{ item.price }} ₽
+                {{ item.cost }} ₽
             </span>
         </div>
         <a class="standart-btn" v-if="count === 0" @click="addToCart">
@@ -80,7 +80,7 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .multu-сhoice{
     display: flex;
     justify-content: space-between;

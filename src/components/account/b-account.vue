@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../../assets/styles/styles.scss">
 <template>
     <div class="b-account">
         <div class="case">

@@ -1,36 +1,59 @@
 <template>
     <div class="b-trade-btn">
         <div class="b-trade-btn-box">
-            <a class="b-trade-item_element_btn disabled" href="#home"><p>Обменяться</p></a>
-            <p>{{ total }}  ₽</p>
-            <p>предметов: {{ items }}</p>
+            <a v-if="CART().length > 0" class="b-trade-item_element_btn enabled" href="#home"><p>Обменяться</p></a>
+            <a v-else class="b-trade-item_element_btn disabled"><p>Обменяться</p></a>
+            <p>{{ cartTotalCost }}  ₽</p>
+            <p>предметов: {{ cartTotalItems }}</p>
         </div>
     </div>
 </template>
 
 <script>
+import {mapGetters} from "vuex";
+
 export default {
-    name: 'b-trade-btn',
-    data() {
-        return {
-            items: 0,
-            total: 0
-        }
+  name: 'b-trade-btn',
+  data() {
+    return {}
+  },
+  methods: {
+      ...mapGetters([
+          'CART'
+      ])
+  },
+  computed: {
+    cartTotalItems(){
+      const cart = this.CART()
+      return cart.reduce((result, item) => result + item.quantity, 0)
+    },
+    cartTotalCost(){
+      const cart = this.CART()
+      return cart.reduce((result, item) => result + item.quantity * item.cost, 0).toFixed(2)
     }
+  }
 }
 </script>
 
 <style lang="scss">
     .b-trade-btn{
-        width: 210px;
+        width: 310px;
         height: 180px;
         padding: 15px;
         background-color: $main-bg-light;
     }
 
-    .disabled p{
+    .enabled p{
         background-color: $main-bg-hover;
-        border: 4px ;
+    }
+
+    .disabled p {
+      background-color: $main-bg;
+      cursor: not-allowed;
+    }
+
+    .disabled p, .enabled p{
+      border: 4px ;
     }
 
     .b-trade-item_element_btn p{

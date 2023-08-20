@@ -9,9 +9,11 @@
                 Обмен
             </p>
             </router-link>
+          <!--
             <a class="active" href="#home">Главная</a>
             <a href="#contact">Контакты</a>
             <a href="#about">О нас</a>
+            -->
         </nav>
     </div>
 </template>
@@ -42,7 +44,7 @@
     .b-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     background-color: $main-bg;
     padding: 20px 10px;

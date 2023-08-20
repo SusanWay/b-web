@@ -23,7 +23,6 @@
 
 <style lang="scss">
     .b-inventory{
-        width: $b-container-width;
         height: 340px;
         padding: 20px;
     }

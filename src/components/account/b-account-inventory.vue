@@ -14,13 +14,6 @@ import bInventory from '../inventory/b-inventory.vue';
 
 export default{
     name: 'b-account-inventory',
-    props:{
-        account_info: {
-            defoult(){
-                return {}
-            }
-        }
-    },
     data(){
         return {}
     },
@@ -33,5 +26,6 @@ export default{
 <style lang="scss">
     .b-account-inventory{
         height: 450px;
+      width: $b-container-width;
     }
 </style>

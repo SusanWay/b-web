@@ -11,7 +11,7 @@
         </div>
         <div class="b-inventory-item_price">
             <span> 
-            {{ item.price }} ₽
+            {{ item.cost }} ₽
         </span>
         </div>
         <a href="#">
