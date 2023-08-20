@@ -1,12 +1,5 @@
-<script>
-  export default{
-    name: 'b-input',
-    data() {
-      return{
-        message: ''
-      }
-    }
-  }
+<script setup>
+
 </script>
 
 <template>
@@ -16,12 +9,12 @@
 </template>
 
 <style lang="scss">
-  .b-input input {
-    width: 100%;
-    font-size: 20px;
-    background-color: $main-bg-inventory-btn;
-    border: 0;
-    outline:none;
-    padding: $padding;
-  }
+.b-input input {
+  width: 100%;
+  font-size: 20px;
+  background-color: $main-bg-inventory-btn;
+  border: 0;
+  outline: none;
+  padding: $padding;
+}
 </style>

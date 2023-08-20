@@ -1,4 +1,4 @@
-import { createStore } from "vuex";
+import {createStore} from "vuex";
 
 // Импортируем модули с определениями состояния, мутаций, действий и геттеров
 import state from "./state/state";

@@ -46,7 +46,7 @@
         },
         {
           "id_steam": 2,
-          "type": "veapone",
+          "type": "weapon",
           "name": "Drift Wood",
           "cost": 2.92,
           "float": 0.49539887,
@@ -60,7 +60,7 @@
       "items": [
         {
           "id_steam": 3,
-          "type": "veapone",
+          "type": "weapon",
           "name": "Gamma Doppler Emerald",
           "cost": 2185312.79,
           "float": 0.02853382,
@@ -68,7 +68,7 @@
         },
         {
           "id_steam": 4,
-          "type": "veapone",
+          "type": "weapon",
           "name": "Medusa",
           "cost": 435057.65,
           "float": 0.11654694,
