@@ -1,5 +1,6 @@
 <script setup>
-import {defineProps} from "vue";
+import {defineProps, computed} from "vue";
+import {dateFormater} from '../utils/scripts'
 
 const props = defineProps({
   acc_data: {
@@ -9,12 +10,22 @@ const props = defineProps({
   }
 })
 
+const lastActivity = computed(() => {
+  const {last_activity} = props.acc_data
+
+  if (last_activity) {
+    return dateFormater(last_activity)
+  }
+
+  return 'Нет данных';
+})
+
 </script>
 
 <template>
   <div class="b-catalog-item">
     <p class="b-catalog-item_element">{{ props.acc_data.name }}</p>
-    <p class="b-catalog-item_element">{{ props.acc_data.last_activity }}</p>
+    <p class="b-catalog-item_element">{{ lastActivity }}</p>
     <router-link class="b-catalog-item_element_btn"
                  :to="`/accaunts/${props.acc_data.id}/${props.acc_data.id_inventory}`">
       <p>

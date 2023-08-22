@@ -1,5 +1,6 @@
 <script setup>
-import {defineProps, ref} from "vue";
+import {computed, defineProps, ref} from "vue";
+import {dateFormater} from '../utils/scripts'
 
 const props = defineProps({
   accountProfile: {
@@ -7,6 +8,16 @@ const props = defineProps({
       return {}
     }
   }
+})
+
+const registrationDate = computed(() => {
+  const {registrationDate} = props.accountProfile
+
+  if (registrationDate) {
+    return dateFormater(registrationDate)
+  }
+
+  return 'Нет данных';
 })
 
 let trades = ref(0)
@@ -22,7 +33,7 @@ let trades = ref(0)
       Логин: {{ props.accountProfile.name }}
     </p>
     <p class="b-account-li">
-      Дата регистарции: {{ props.accountProfile.registrationDate }}
+      Дата регистарции: {{ registrationDate }}
     </p>
     <p class="b-account-li">
       Обменов: {{ trades }}

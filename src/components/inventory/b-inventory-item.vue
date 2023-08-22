@@ -15,19 +15,19 @@ const props = defineProps({
   <div class="b-inventory-item">
     <img :src="props.item.img" alt="">
     <div class="b-inventory-item_info">
-            <span v-if="item.type == 'case'">
-                Кол-во: {{ props.item.count }}
-            </span>
-      <span v-if="item.type == 'veapone'">
-                {{ props.item.float }}
-            </span>
+      <span v-if="item.type == 'case'">
+        Кол-во: {{ props.item.count }}
+      </span>
+      <span v-else>
+        {{ props.item.float }}
+      </span>
     </div>
     <div class="b-inventory-item_price">
-            <span> 
-            {{ props.item.cost }} ₽
-        </span>
+      <span>
+        {{ props.item.cost }} ₽
+      </span>
     </div>
-    <a href="#">
+    <a>
       <p>
         market
       </p>

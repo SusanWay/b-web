@@ -1,7 +1,7 @@
 <script setup>
 import {defineProps, defineEmits} from 'vue'
-import bInput from '../b-input.vue'
-import bSelect from '../b-select.vue'
+import bInput from '../ui-components/b-input.vue'
+import bSelect from '../ui-components/b-select.vue'
 
 const emit = defineEmits(['changeOptions'])
 const props = defineProps({
