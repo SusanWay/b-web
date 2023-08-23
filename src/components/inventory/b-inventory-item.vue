@@ -1,5 +1,6 @@
 <script setup>
-import {defineProps} from 'vue'
+import {defineProps, ref} from 'vue'
+import bPopupItem from '../ui-components/b-popup-item.vue'
 
 const props = defineProps({
   item: {
@@ -9,11 +10,19 @@ const props = defineProps({
   }
 })
 
+const confirmationPopup = ref(null)
+const openPopup = async ()=>{
+  await confirmationPopup.value.open()
+}
 </script>
 
 <template>
   <div class="b-inventory-item">
-    <img :src="props.item.img" alt="">
+    <img @click="openPopup" :src="props.item.img" alt="">
+    <bPopupItem
+        ref="confirmationPopup"
+        :item="props.item"
+    />
     <div class="b-inventory-item_info">
       <span v-if="item.type == 'case'">
         Кол-во: {{ props.item.count }}
