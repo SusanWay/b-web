@@ -1,5 +1,5 @@
 <script setup>
-import {defineProps, ref} from 'vue'
+import {ref} from 'vue'
 import bPopupItem from '../ui-components/b-popup-item.vue'
 
 const props = defineProps({

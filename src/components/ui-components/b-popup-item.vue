@@ -1,5 +1,5 @@
 <script setup>
-import {defineProps, defineExpose, ref} from "vue";
+import {defineExpose, ref} from "vue";
 
 const props = defineProps({
   item: {

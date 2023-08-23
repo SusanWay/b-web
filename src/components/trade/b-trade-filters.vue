@@ -1,5 +1,4 @@
 <script setup>
-import {defineProps, defineEmits} from 'vue'
 import bInput from '../ui-components/b-input.vue'
 import bSelect from '../ui-components/b-select.vue'
 

@@ -1,5 +1,5 @@
 <script setup>
-import {ref, computed, defineProps, onMounted} from 'vue'
+import {ref, computed, onMounted} from 'vue'
 import {useStore} from 'vuex'
 import BTradeCatalogItem from "./b-trade-catalog-item.vue"
 

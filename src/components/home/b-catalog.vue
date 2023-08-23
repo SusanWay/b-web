@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import {onMounted} from "vue";
 import {useStore} from 'vuex';
 import bCatalogItem from './b-catalog-item.vue';
@@ -14,7 +14,7 @@ onMounted(() => {
 <template>
   <div class="b-catalog">
     <h1 class="b-h1">Список аккаунтов</h1>
-    <div v-if="products != []" class="b-catalog__header">
+    <div class="b-catalog__header">
       <div class="b-catalog__header__items">
         <p>Логин</p>
         <p>Последняя активность</p>
