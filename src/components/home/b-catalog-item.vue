@@ -1,10 +1,22 @@
 <script setup lang="ts">
-import {computed} from "vue";
+import {computed, PropType} from "vue";
 import {dateFormater} from '../utils/scripts'
+
+interface Account {
+  "id": number,
+  "id_inventory": number,
+  "name": string,
+  "last_activity": string,
+  "registration_date": string,
+  "email": string,
+  "phone": string,
+  "steam_id": string
+}
 
 const props = defineProps({
   acc_data: {
-    type: Object, default() {
+    type: Object as PropType<Account>,
+    default() {
       return {}
     }
   }
@@ -27,7 +39,7 @@ const lastActivity = computed(() => {
     <p class="b-catalog-item_element">{{ props.acc_data.name }}</p>
     <p class="b-catalog-item_element">{{ lastActivity }}</p>
     <router-link class="b-catalog-item_element_btn"
-                 :to="`/accaunts/${props.acc_data.id}/${props.acc_data.id_inventory}`">
+                 :to="`/accaunts/${props.acc_data?.id}/${props.acc_data?.id_inventory}`">
       <p>
         Подробнее
       </p>
