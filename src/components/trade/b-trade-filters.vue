@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import bInput from '../ui-components/b-input.vue'
 import bSelect from '../ui-components/b-select.vue'
 
@@ -16,7 +16,7 @@ const props = defineProps({
   }
 })
 
-const changeOptions = (type) => {
+const changeOptions = (type:string) => {
   emit('changeOptions', type)
 }
 

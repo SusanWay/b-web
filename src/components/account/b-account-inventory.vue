@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import bInventory from '../inventory/b-inventory.vue';
 </script>
 

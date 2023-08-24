@@ -1,4 +1,5 @@
-<script setup>
+<script setup lang="ts">
+
 const emit = defineEmits(['changeOptions'])
 const props = defineProps({
   selected: {
@@ -16,10 +17,8 @@ const props = defineProps({
 })
 
 const changeOptions = () => {
-  emit('changeOptions', event.target.value)
+  emit('changeOptions', event?.target?.value)
 }
-
-//        this.$emit('changeOptions', event.target.value)
 
 </script>
 

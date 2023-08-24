@@ -8,7 +8,6 @@ const store = useStore()
 onMounted(() => {
   store.dispatch('GET_ACCOUNTS_FROM_API')
 })
-
 </script>
 
 <template>

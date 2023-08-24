@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import {computed} from "vue"
 import {useStore} from "vuex"
 
@@ -22,7 +22,7 @@ const deleteFromCart = () => {
   emits('deleteFromCart', props.item)
 }
 const itemCount = computed(() => {
-  const existingCartItemIndex = store.getters.CART.findIndex(cartItem => cartItem.id_steam === props.item.id_steam);
+  const existingCartItemIndex = store.getters.CART.findIndex((cartItem: {id_steam: number}) => cartItem.id_steam === props.item.id_steam);
 
   if (existingCartItemIndex !== -1) {
     return store.getters.CART[existingCartItemIndex].quantity

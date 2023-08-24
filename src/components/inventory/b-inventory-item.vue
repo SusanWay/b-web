@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import {ref} from 'vue'
 import bPopupItem from '../ui-components/b-popup-item.vue'
 
@@ -10,8 +10,8 @@ const props = defineProps({
   }
 })
 
-const confirmationPopup = ref(null)
-const openPopup = async ()=>{
+const confirmationPopup = ref()
+const openPopup = async () => {
   await confirmationPopup.value.open()
 }
 </script>

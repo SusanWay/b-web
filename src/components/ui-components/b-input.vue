@@ -1,10 +1,10 @@
-<script setup>
+<script setup lang="ts">
 
 </script>
 
 <template>
   <div class="b-input">
-    <input v-model="message" placeholder="Поиск..."/>
+    <input placeholder="Поиск..."/>
   </div>
 </template>
 

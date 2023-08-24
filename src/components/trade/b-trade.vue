@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import {ref} from "vue";
 import bTradeCart from './b-trade-cart.vue'
 import bTradeBtn from './b-trade-btn.vue'
