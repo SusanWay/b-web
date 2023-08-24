@@ -1,12 +1,15 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "http://localhost:8080";
 
 export default {
     // Получение списка аккаунтов из API и обновление состояния
     async GET_ACCOUNTS_FROM_API({commit}:{commit:any}) {
         try {
-            const response = await axios.get(`${API_BASE_URL}/accounts`);
+            const response = await axios.get(`${API_BASE_URL}/v2/forecast?lat=55.75396&lon=37.620393&extra=true`,{
+                headers:{'Yandex-API-Key': '8c3dd080-224b-4837-99a2-eba0adc7d872',
+                    'Content-Type': 'application/json'}
+            });
             commit('SET_ACCOUNTS_TO_STATE', response.data);
             return response;
         } catch (error) {

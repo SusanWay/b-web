@@ -13,6 +13,7 @@ onMounted(() => {
 
 <template>
   <div class="b-catalog">
+    {{store.getters.ACCOUNTS}}
     <h1 class="b-h1">Список аккаунтов</h1>
     <div class="b-catalog__header">
       <div class="b-catalog__header__items">
