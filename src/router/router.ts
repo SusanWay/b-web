@@ -12,9 +12,9 @@ const routes = [
         component: bCatalog
     },
     {
-        path: '/accaunts/:id/:id_inventory',
+        path: '/accaunts/:id/:idInventory',
         name: 'account',
-        component: bAccount
+        component: bAccount,
     },
     {
         path: '/trade',

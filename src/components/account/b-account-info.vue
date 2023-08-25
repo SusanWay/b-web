@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import Account from "@/interfaces/accountInterface";
+import {PropType} from "vue";
+
 const props = defineProps({
-  accountInfo: {
-    type: Object, default() {
-      return {}
-    }
+  account: {
+    type: Object as PropType<Account>,
+    default: () => {}
   }
 })
 </script>
@@ -14,13 +16,13 @@ const props = defineProps({
       Контактная информация
     </h2>
     <p class="b-account-li">
-      E-mail: {{ props.accountInfo.email }}
+      E-mail: {{ props.account.email }}
     </p>
     <p class="b-account-li">
-      Телефон: {{ props.accountInfo.phone }}
+      Телефон: {{ props.account.phone }}
     </p>
     <p class="b-account-li">
-      Steam id: {{ props.accountInfo.steamId }}
+      Steam id: {{ props.account.idSteam }}
     </p>
   </div>
 </template>

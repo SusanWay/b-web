@@ -1,17 +1,18 @@
 <script setup lang="ts">
-import {computed, ref} from "vue";
+import {computed, ref, PropType} from "vue";
 import {dateFormater} from '../utils/scripts'
+import Account from "@/interfaces/accountInterface";
 
 const props = defineProps({
-  accountProfile: {
-    type: Object, default() {
-      return {}
-    }
+  account: {
+    type: Object as PropType<Account>,
+    default: () => {}
   }
 })
 
+
 const registrationDate = computed(() => {
-  const {registrationDate} = props.accountProfile
+  const {registrationDate} = props.account
 
   if (registrationDate) {
     return dateFormater(registrationDate)
@@ -30,7 +31,7 @@ let trades = ref(0)
       Профиль
     </h2>
     <p class="b-account-li">
-      Логин: {{ props.accountProfile.name }}
+      Логин: {{ props.account.name }}
     </p>
     <p class="b-account-li">
       Дата регистарции: {{ registrationDate }}

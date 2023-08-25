@@ -1,29 +1,20 @@
 import { defineStore } from 'pinia'
 import {ref, computed} from "vue";
+import Account from '../interfaces/accountInterface'
 import axios from "axios";
 
 const API_BASE_URL = "http://localhost:3000"
 
-interface Account {
-    "id": number,
-    "id_inventory": number,
-    "name": string,
-    "last_activity": string,
-    "registration_date": string,
-    "email": string,
-    "phone": string,
-    "steam_id": string
-}
 
-export const useAccountsStore = defineStore('accounts', () => {
+export const useAccountStore = defineStore('accounts', () => {
     const accountsList = ref( [] as Account[])
-    const currentAccount= ref( {} as Account )
+    const accountCurrent= ref( {} as Account )
 
     const GET_ACCOUNTS = computed(()=>{
         return accountsList.value
     })
-    const GET_CURRENT_ACCOUNT = computed(() => {
-        return currentAccount.value
+    const GET_ACCOUNT_CURRENT = computed(() => {
+        return accountCurrent.value
     })
 
     const GET_ACCOUNTS_FROM_API = async () => {
@@ -37,10 +28,10 @@ export const useAccountsStore = defineStore('accounts', () => {
         }
     }
 
-    const GET_CURRENT_ACCOUNT_FROM_API = async (id:number) => {
+    const GET_ACCOUNT_CURRENT_FROM_API = async (id:string) => {
         try {
             const response = await axios.get(`${API_BASE_URL}/accounts/${id}`)
-            currentAccount.value = response.data
+            accountCurrent.value = response.data
             return response.data
         }catch (error){
             console.error(error)
@@ -48,5 +39,5 @@ export const useAccountsStore = defineStore('accounts', () => {
         }
     }
 
-    return {GET_ACCOUNTS, GET_CURRENT_ACCOUNT, GET_ACCOUNTS_FROM_API, GET_CURRENT_ACCOUNT_FROM_API}
+    return {GET_ACCOUNTS, GET_CURRENT_ACCOUNT: GET_ACCOUNT_CURRENT, GET_ACCOUNTS_FROM_API, GET_CURRENT_ACCOUNT_FROM_API: GET_ACCOUNT_CURRENT_FROM_API}
 })

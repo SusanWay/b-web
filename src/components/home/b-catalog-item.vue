@@ -1,20 +1,12 @@
 <script setup lang="ts">
 import {computed, PropType} from "vue";
 import {dateFormater} from '../utils/scripts'
+import Account from '@/interfaces/accountInterface'
 
-interface Account {
-  "id": number,
-  "id_inventory": number,
-  "name": string,
-  "last_activity": string,
-  "registration_date": string,
-  "email": string,
-  "phone": string,
-  "steam_id": string
-}
+
 
 const props = defineProps({
-  acc_data: {
+  account: {
     type: Object as PropType<Account>,
     default() {
       return {}
@@ -22,11 +14,11 @@ const props = defineProps({
   }
 })
 
-const lastActivity = computed(() => {
-  const {last_activity} = props.acc_data
+const lastActivityAccount = computed(() => {
+  const {lastActivity} = props.account
 
-  if (last_activity) {
-    return dateFormater(last_activity)
+  if (lastActivity) {
+    return dateFormater(lastActivity)
   }
 
   return 'Нет данных';
@@ -34,12 +26,13 @@ const lastActivity = computed(() => {
 
 </script>
 
+
 <template>
   <div class="b-catalog-item">
-    <p class="b-catalog-item_element">{{ props.acc_data.name }}</p>
-    <p class="b-catalog-item_element">{{ lastActivity }}</p>
+    <p class="b-catalog-item_element">{{ props.account.name }}</p>
+    <p class="b-catalog-item_element">{{ lastActivityAccount }}</p>
     <router-link class="b-catalog-item_element_btn"
-                 :to="`/accaunts/${props.acc_data?.id}/${props.acc_data?.id_inventory}`">
+                 :to="`/accaunts/${props.account?.id}/${props.account?.idInventory}`">
       <p>
         Подробнее
       </p>

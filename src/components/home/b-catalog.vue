@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import {onMounted} from "vue";
-import {useAccountsStore} from "@/stores/AccountsStore";
+import {useAccountStore} from "@/stores/accountStore";
 import bCatalogItem from './b-catalog-item.vue';
 
 
-const accountsStore = useAccountsStore()
+const accountsStore = useAccountStore()
 
 onMounted(() => {
   accountsStore.GET_ACCOUNTS_FROM_API()
@@ -26,7 +26,7 @@ onMounted(() => {
       <bCatalogItem
           v-for="account of accountsStore.GET_ACCOUNTS"
           :key="account.id"
-          v-bind:acc_data="account"
+          v-bind:account="account"
       />
     </div>
   </div>
