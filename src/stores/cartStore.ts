@@ -17,7 +17,8 @@ export const useCartStore = defineStore('cart', () => {
         const existingItemIndex = cart.value.findIndex(cartItem => cartItem.idSteam === item.idSteam);
 
         if (existingItemIndex !== -1) {
-            cart[existingItemIndex].quantity++;
+            console.log(12)
+            cart.value[existingItemIndex].quantity++
         } else {
             cart.value.push({...item, quantity: 1});
         }

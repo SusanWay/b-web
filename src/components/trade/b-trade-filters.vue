@@ -5,18 +5,17 @@ import bSelect from '../ui-components/b-select.vue'
 const emit = defineEmits(['changeOptions'])
 const props = defineProps({
   selectedType: {
-    type: String, default() {
-      return ''
-    }
+    type: String,
+    default: () => ''
   },
   itemType: {
-    type: Object, default() {
-      return {}
+    type: Object,
+    default: () => {
     }
   }
 })
 
-const changeOptions = (type:string) => {
+const changeOptions = (type: string) => {
   emit('changeOptions', type)
 }
 

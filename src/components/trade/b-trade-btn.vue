@@ -1,16 +1,14 @@
 <script setup lang="ts">
 import {computed} from "vue";
-import {useStore} from "vuex";
+import {useCartStore} from "@/stores/cartStore";
 
-const store = useStore()
-
+const cartStore = useCartStore()
+const cart = cartStore.GET_CART_ITEMS
 const cartTotalItems = computed(() => {
-  const cart = store.getters.CART
   return cart.reduce((totalItems, item) => totalItems + item.quantity, 0)
 })
 
 const cartTotalCost = computed(() => {
-  const cart = store.getters.CART
   return cart.reduce((total, item) => total + item.quantity * item.cost, 0).toFixed(2)
 })
 
@@ -19,7 +17,7 @@ const cartTotalCost = computed(() => {
 <template>
   <div class="b-trade-btn">
     <div class="b-trade-btn-box">
-      <a v-if="store.getters.CART.length > 0" class="b-trade-item_element_btn enabled" href="#home"><p>Обменяться</p>
+      <a v-if="cart.length > 0" class="b-trade-item_element_btn enabled" href="#home"><p>Обменяться</p>
       </a>
       <a v-else class="b-trade-item_element_btn disabled"><p>Обменяться</p></a>
       <p>{{ cartTotalCost }} ₽</p>

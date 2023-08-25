@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import {useStore} from 'vuex';
+import {useCartStore} from "@/stores/cartStore";
 import bTradeCartItem from './b-trade-cart-item.vue'
 
-const store = useStore()
-
+const cartStore = useCartStore()
 </script>
 
 <template>
@@ -13,8 +12,8 @@ const store = useStore()
     </h2>
     <div class="b-trade-inventory">
       <bTradeCartItem
-          v-for="item in store.getters.CART"
-          :key="item.id_steam"
+          v-for="item of cartStore.GET_CART_ITEMS "
+          :key="item.idSteam"
           v-bind:item="item"
       />
     </div>

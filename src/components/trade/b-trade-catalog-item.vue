@@ -8,7 +8,8 @@ const cartStore = useCartStore()
 const props = defineProps({
   item: {
     type: Object as PropType<Item>,
-    default: () => {}
+    default: () => {
+    }
   }
 })
 
