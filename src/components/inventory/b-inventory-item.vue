@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import {ref} from 'vue'
+import {ref, PropType} from 'vue'
 import bPopupItem from '../ui-components/b-popup-item.vue'
+import Item from "@/interfaces/itemInterface";
 
 const props = defineProps({
   item: {
-    type: Object, default() {
-      return {}
-    }
+    type: Object as PropType<Item>,
+    default: () => {}
   }
 })
 
@@ -18,7 +18,7 @@ const openPopup = async () => {
 
 <template>
   <div class="b-inventory-item">
-    <img @click="openPopup" :src="props.item.img" alt="">
+    <img @click="openPopup" :src="props.item?.img" alt="">
     <bPopupItem
         ref="confirmationPopup"
         :item="props.item"

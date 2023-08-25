@@ -2,42 +2,42 @@
   "accounts": [
     {
       "id": 1,
-      "id_inventory": 1,
+      "idInventory": 1,
       "name": "SusanWay",
-      "last_activity": "2012-04-21T18:25:43-05:00",
-      "registration_date": "2019-08-27T18:25:43-05:00",
+      "lastActivity": "2012-04-21T18:25:43-05:00",
+      "registrationDate": "2019-08-27T18:25:43-05:00",
       "email": "SusanWay@mail.ru",
       "phone": "89601578961",
-      "steam_id": "76561198103854958"
+      "idSteam": "76561198103854958"
     },
     {
       "id": 2,
-      "id_inventory": 2,
+      "idInventory": 2,
       "name": "FinnKors",
-      "last_activity": "2012-04-21T18:25:43-05:00",
-      "registration_date": "2013-12-27T18:25:43-05:00",
+      "lastActivity": "2012-04-21T18:25:43-05:00",
+      "registrationDate": "2013-12-27T18:25:43-05:00",
       "email": "FinnKors@mail.ru",
       "phone": "89601578961",
-      "steam_id": "76561198103854958"
+      "idSteam": "76561198103854958"
     },
     {
       "id": 3,
-      "id_inventory": 3,
+      "idInventory": 3,
       "name": "Dexte11y",
-      "last_activity": "2014-07-14T18:25:43-05:00",
-      "registration_date": "2015-06-13T18:25:43-05:00",
+      "lastActivity": "2014-07-14T18:25:43-05:00",
+      "registrationDate": "2015-06-13T18:25:43-05:00",
       "email": "Dexte11y@mail.ru",
       "phone": "89601578961",
-      "steam_id": "76561198103854958"
+      "idSteam": "76561198103854958"
     }
   ],
   "inventorys": [
     {
       "id": 1,
-      "id_account": 1,
+      "idAccount": 1,
       "items": [
         {
-          "id_steam": 1,
+          "idSteam": 1,
           "type": "case",
           "name": "2020 RMR Contenders",
           "count": 12,
@@ -45,7 +45,7 @@
           "img": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsQEl9Jg9SpIW1KgRr7OHFY28SvoyJl4-Fg_L6N77DhSUFsccgie-W9Nqj3gblqhA_NWyiLIfDclA_YFjU_1a7yOfmhcO9vpvA1zI97X4HoaIB"
         },
         {
-          "id_steam": 2,
+          "idSteam": 2,
           "type": "weapon",
           "name": "Drift Wood",
           "cost": 2.92,
@@ -56,10 +56,10 @@
     },
     {
       "id": 2,
-      "id_account": 2,
+      "idAccount": 2,
       "items": [
         {
-          "id_steam": 3,
+          "idSteam": 3,
           "type": "weapon",
           "name": "Gamma Doppler Emerald",
           "cost": 2185312.79,
@@ -67,7 +67,7 @@
           "img": "https://s1.cs.money/98b6b06302e6908a4012b0ba9d7be9ad_large_preview.png"
         },
         {
-          "id_steam": 4,
+          "idSteam": 4,
           "type": "weapon",
           "name": "Medusa",
           "cost": 435057.65,
@@ -78,10 +78,10 @@
     },
     {
       "id": 3,
-      "id_account": 3,
+      "idAccount": 3,
       "items": [
         {
-          "id_steam": 5,
+          "idSteam": 5,
           "type": "case",
           "name": "Antwerp 2022 Challengers Autograph Capsule",
           "count": 30,
@@ -89,7 +89,7 @@
           "img": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsQEl9Jg9SpIW1KgRr7PLGZSpH_szkxNLZqPDmPK7BqWhZ6cl9j-fG8J7mxlK1-ks_Zz32I4GdJlJrY1HX-wDrlO3v05e87pmfyXVrvCAj43bemhapwUYbHWM7HMY"
         },
         {
-          "id_steam": 6,
+          "idSteam": 6,
           "type": "case",
           "name": "StatTrak™ Swap Tool",
           "count": 7,

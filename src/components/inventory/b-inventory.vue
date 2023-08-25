@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import bInventoryItem from './b-inventory-item.vue'
-import {useStore} from "vuex";
+import {useInventoryStore} from "@/stores/inventoryStore";
 
-const store = useStore()
+const inventoryStore = useInventoryStore()
 </script>
 
 <template>
   <div class="b-inventory">
     <bInventoryItem
-        v-for="item in store.getters.CURRENT_INVENTORY.items"
-        :key="item.id_steam"
+        v-for="item of inventoryStore.GET_INVENTORY_CURRENT_ITEMS"
+        :key="item.idSteam"
         v-bind:item="item"
     />
   </div>

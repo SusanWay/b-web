@@ -9,7 +9,7 @@ let selectedType = ref('ALL')
 
 const itemType = ref([{name: 'Все', value: 'ALL'}, {name: 'Кейсы', value: 'case'}, {name: 'Оружие', value: 'weapon'}])
 
-let changeOptions = (type) => {
+let changeOptions = (type:string) => {
   selectedType.value = type
 }
 

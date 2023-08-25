@@ -4,5 +4,6 @@ export default interface Item {
     "name": string,
     "cost": number,
     "float": number,
-    "img": string
+    "img": string,
+    "count": number
 }

@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import {computed} from "vue"
-import {useStore} from "vuex"
+import {computed, PropType} from "vue"
+import Item from "@/interfaces/itemInterface"
+import {useCartStore} from "@/stores/cartStore"
 
-const store = useStore()
+const cartStore = useCartStore()
 
 const props = defineProps({
   item: {
-    type: Object, default() {
-      return {}
-    }
+    type: Object as PropType<Item>,
+    default: () => {}
   }
 })
 
@@ -22,10 +22,10 @@ const deleteFromCart = () => {
   emits('deleteFromCart', props.item)
 }
 const itemCount = computed(() => {
-  const existingCartItemIndex = store.getters.CART.findIndex((cartItem: {id_steam: number}) => cartItem.id_steam === props.item.id_steam);
+  const existingCartItemIndex = cartStore.GET_CART_ITEMS.findIndex(cartItem => cartItem.idSteam === props.item.idSteam)
 
   if (existingCartItemIndex !== -1) {
-    return store.getters.CART[existingCartItemIndex].quantity
+    return cartStore.GET_CART_ITEMS[existingCartItemIndex].quantity
   }
   return 0
 })
@@ -34,12 +34,12 @@ const itemCount = computed(() => {
 
 <template>
   <div class="b-trade-catalog-item">
-    <img :src="props.item.img" alt="">
+    <img :src="props.item?.img" alt="">
     <div class="b-trade-catalog-item_info">
-            <span v-if="props.item.type == 'case'">
+            <span v-if="props.item?.type == 'case'">
                 Кол-во: {{ props.item.count }}
             </span>
-      <span v-if="props.item.type == 'weapon'">
+      <span v-if="props.item?.type == 'weapon'">
                 {{ props.item.float }}
             </span>
     </div>
@@ -54,7 +54,7 @@ const itemCount = computed(() => {
     <a class="standart-btn" v-else-if="itemCount !== 0 && item.type === 'weapon'" @click="deleteFromCart">
       <p>Вернуть</p>
     </a>
-    <div v-else-if="itemCount === props.item.count && item.type === 'case'" class="multu-сhoice">
+    <div v-else-if="itemCount === props.item?.count && item.type === 'case'" class="multu-сhoice">
       <a @click="deleteFromCart">
         <p>
           --
@@ -69,7 +69,7 @@ const itemCount = computed(() => {
         </p>
       </a>
     </div>
-    <div v-else-if="itemCount !== 0 && props.item.type === 'case'" class="multu-сhoice">
+    <div v-else-if="itemCount !== 0 && props.item?.type === 'case'" class="multu-сhoice">
       <a @click="deleteFromCart">
         <p>--</p>
       </a>
