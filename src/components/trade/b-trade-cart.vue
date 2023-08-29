@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import {useCartStore} from "@/stores/cartStore";
-import bTradeCartItem from './b-trade-cart-item.vue'
+import {useCartStore} from "@/stores/cartStore"
+import bItem from '../ui-components/b-item.vue'
 
 const cartStore = useCartStore()
 </script>
@@ -11,7 +11,7 @@ const cartStore = useCartStore()
       Вы получите
     </h2>
     <div class="b-trade-inventory">
-      <bTradeCartItem
+      <bItem
           v-for="item of cartStore.GET_CART_ITEMS "
           :key="item.idSteam"
           v-bind:item="item"

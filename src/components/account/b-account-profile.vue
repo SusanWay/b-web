@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {computed, ref, PropType} from "vue";
-import {dateFormater} from '../utils/scripts'
+import {dateFormatter} from '@/composable/composable'
 import Account from "@/interfaces/accountInterface";
 
 const props = defineProps({
@@ -15,7 +15,7 @@ const registrationDate = computed(() => {
   const {registrationDate} = props.account
 
   if (registrationDate) {
-    return dateFormater(registrationDate)
+    return dateFormatter(registrationDate)
   }
 
   return 'Нет данных';

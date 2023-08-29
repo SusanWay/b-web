@@ -3,7 +3,8 @@ import {ref, computed, onMounted} from 'vue'
 import {useInventoryStore} from "@/stores/inventoryStore"
 import {useCartStore} from "@/stores/cartStore";
 import Item from "@/interfaces/itemInterface";
-import BTradeCatalogItem from "./b-trade-catalog-item.vue"
+import bItem from '../ui-components/b-item.vue'
+import bBtnCart from '../ui-components/b-btn-cart.vue'
 
 const inventoryStore = useInventoryStore()
 const cartStore = useCartStore()
@@ -57,13 +58,17 @@ onMounted(() => {
       Предметы доступные для обмена
     </h2>
     <div class="b-trade-inventory">
-      <bTradeCatalogItem
+      <bItem
           v-for="item in filteredItems"
           :key="item.idSteam"
-          :item="item"
-          @deleteFromCart="deleteFromCart"
-          @addToCart="addToCart"
-      />
+          :item="item">
+        <bBtnCart
+            :key="item.idSteam"
+            :item="item"
+            @deleteFromCart="deleteFromCart"
+            @addToCart="addToCart"
+        />
+      </bItem>
     </div>
   </div>
 </template>

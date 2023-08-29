@@ -1,5 +1,5 @@
-import { defineStore } from 'pinia'
-import {ref, computed} from "vue";
+import {defineStore} from 'pinia'
+import {ref, computed, watch} from "vue";
 import axios from "axios";
 import CartItem from "@/interfaces/cartItemInterface";
 import Item from "@/interfaces/itemInterface";
@@ -8,12 +8,23 @@ const API_BASE_URL = "http://localhost:3000"
 
 
 export const useCartStore = defineStore('cart', () => {
-    const cart = ref( [] as CartItem[])
+    const cart = ref([] as CartItem[])
+
+    const itemsInLocalStore = localStorage.getItem('items')
+
+    if (itemsInLocalStore) {
+        console.log(itemsInLocalStore)
+        cart.value = JSON.parse(itemsInLocalStore)._value
+    }
+
+    watch(() => cart,(state) =>{
+        localStorage.setItem('items', JSON.stringify(state))
+    }, {deep: true})
 
     const GET_CART_ITEMS = computed(() => {
         return cart.value
     })
-    const ADD_TO_CART = (item:Item) => {
+    const ADD_TO_CART = (item: Item) => {
         const existingItemIndex = cart.value.findIndex(cartItem => cartItem.idSteam === item.idSteam);
 
         if (existingItemIndex !== -1) {
@@ -24,7 +35,7 @@ export const useCartStore = defineStore('cart', () => {
         }
     }
 
-    const DELETE_FROM_CART = (item:Item) => {
+    const DELETE_FROM_CART = (item: Item) => {
         const existingItemIndex = cart.value.findIndex(cartItem => cartItem.idSteam === item.idSteam);
 
         if (existingItemIndex !== -1) {

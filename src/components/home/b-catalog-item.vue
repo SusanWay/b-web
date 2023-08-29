@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {computed, PropType} from "vue";
-import {dateFormater} from '../utils/scripts'
+import {dateFormatter} from '@/composable/composable'
 import Account from '@/interfaces/accountInterface'
 
 
@@ -18,7 +18,7 @@ const lastActivityAccount = computed(() => {
   const {lastActivity} = props.account
 
   if (lastActivity) {
-    return dateFormater(lastActivity)
+    return dateFormatter(lastActivity)
   }
 
   return 'Нет данных';
