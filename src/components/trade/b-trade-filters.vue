@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import bInput from '../ui-components/b-input.vue'
 import bSelect from '../ui-components/b-select.vue'
+import FilterItemType from "@/interfaces/filterItemTypeInterface";
 
 const emit = defineEmits(['changeOptions'])
 const props = defineProps({
@@ -9,9 +10,8 @@ const props = defineProps({
     default: () => ''
   },
   itemType: {
-    type: Object,
-    default: () => {
-    }
+    type: Array,
+    default: () => [] as FilterItemType[]
   }
 })
 

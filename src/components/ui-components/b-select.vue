@@ -1,5 +1,7 @@
 <script setup lang="ts">
 
+import FilterItemType from "@/interfaces/filterItemTypeInterface";
+
 const emit = defineEmits(['changeOptions'])
 const props = defineProps({
   selected: {
@@ -11,7 +13,7 @@ const props = defineProps({
   options: {
     type: Array,
     default() {
-      return []
+      return [] as FilterItemType[]
     }
   }
 })

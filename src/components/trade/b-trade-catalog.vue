@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import {ref, computed, onMounted} from 'vue'
 import {useInventoryStore} from "@/stores/inventoryStore"
-import {useCartStore} from "@/stores/cartStore";
-import Item from "@/interfaces/itemInterface";
+import {useCartStore} from "@/stores/cartStore"
+import Item from "@/interfaces/itemInterface"
 import bItem from '../ui-components/b-item.vue'
 import bBtnCart from '../ui-components/b-btn-cart.vue'
+import bItemPlace from '../ui-components/b-item-place.vue'
 
 const inventoryStore = useInventoryStore()
 const cartStore = useCartStore()
@@ -54,10 +55,7 @@ onMounted(() => {
 
 <template>
   <div class="b-trade-catalog">
-    <h2>
-      Предметы доступные для обмена
-    </h2>
-    <div class="b-trade-inventory">
+    <bItemPlace msg="Предметы доступные для обмена">
       <bItem
           v-for="item in filteredItems"
           :key="item.idSteam"
@@ -69,7 +67,7 @@ onMounted(() => {
             @addToCart="addToCart"
         />
       </bItem>
-    </div>
+    </bItemPlace>
   </div>
 </template>
 
