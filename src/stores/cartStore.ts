@@ -1,11 +1,7 @@
 import {defineStore} from 'pinia'
 import {ref, computed, watch} from "vue";
-import axios from "axios";
 import CartItem from "@/interfaces/cartItemInterface";
 import Item from "@/interfaces/itemInterface";
-
-const API_BASE_URL = "http://localhost:3000"
-
 
 export const useCartStore = defineStore('cart', () => {
     const cart = ref([] as CartItem[])
@@ -13,7 +9,6 @@ export const useCartStore = defineStore('cart', () => {
     const itemsInLocalStore = localStorage.getItem('items')
 
     if (itemsInLocalStore) {
-        console.log(itemsInLocalStore)
         cart.value = JSON.parse(itemsInLocalStore)._value
     }
 

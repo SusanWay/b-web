@@ -1,6 +1,5 @@
 <script setup lang="ts">
-
-import FilterItemType from "@/interfaces/filterItemTypeInterface";
+import FilterItemType from "@/interfaces/filterItemTypeInterface"
 
 const emit = defineEmits(['changeOptions'])
 const props = defineProps({
@@ -18,8 +17,8 @@ const props = defineProps({
   }
 })
 
-const changeOptions = () => {
-  emit('changeOptions', event?.target?.value)
+const changeOptions = (event) => {
+  emit('changeOptions', event.target.value)
 }
 
 </script>
@@ -28,7 +27,7 @@ const changeOptions = () => {
   <div class="b-select">
     <select
         :value="props.selected"
-        @change="changeOptions"
+        @change="changeOptions($event)"
     >
       <option v-for="option in props.options" :key="option.value" :value="option.value">
         {{ option.name }}
