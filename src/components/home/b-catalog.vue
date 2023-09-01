@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {onMounted} from "vue";
-import {useAccountStore} from "@/stores/accountStore";
+import {useAccountStore} from "../../stores/accountStore";
 import bCatalogItem from './b-catalog-item.vue';
 
 
