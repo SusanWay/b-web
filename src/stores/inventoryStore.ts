@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia'
 import {ref, computed} from "vue"
-import Inventory from "@/interfaces/inventoryInterface"
+import Inventory from "../interfaces/inventoryInterface.ts"
 import axios from "axios"
-import Item from "@/interfaces/itemInterface"
+import Item from "../interfaces/itemInterface"
 
 const API_BASE_URL = "http://localhost:3000"
 

@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import {defineExpose, ref, PropType} from "vue"
 import Item from "@/interfaces/itemInterface";
+import CartItem from "@/interfaces/cartItemInterface.ts";
 
 const props = defineProps({
   item: {
-    type: Object as PropType<Item>,
+    type: Object as PropType<Item> | PropType<CartItem>,
     default: () => {
     }
   }

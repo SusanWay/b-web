@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import {onMounted} from "vue";
-import {useAccountStore} from "../../stores/accountStore";
-import bCatalogItem from './b-catalog-item.vue';
+import {onMounted} from "vue"
+import {useAccountStore} from "@/stores/accountStore.ts"
+import bCatalogItem from './b-catalog-item.vue'
 
+const a = 123
 
 const accountsStore = useAccountStore()
 

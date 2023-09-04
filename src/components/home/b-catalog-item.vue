@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import {computed, PropType} from "vue";
-import {dateFormatter} from '@/composable/composable'
+import {dateFormatter} from '@/utils/dateFormater/dateFormater.js'
 import Account from '@/interfaces/accountInterface'
-
-
 
 const props = defineProps({
   account: {
@@ -44,12 +42,12 @@ const lastActivityAccount = computed(() => {
 
 <style lang="scss">
 .b-catalog-item {
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0 20px 0;
 }
 
 .b-catalog-item_element_btn {
   border-radius: 4px;
-  margin: 16px 0px 16px 0px;
+  margin: 16px 0 16px 0;
   border: $b-li-border-bottom;
   background-color: $main-bg-hover;
 }

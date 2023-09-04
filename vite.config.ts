@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(() => ({
   plugins: [vue()],
   resolve: {
     alias: [{ find: "@", replacement: resolve(__dirname, "./src") }]
@@ -15,5 +15,5 @@ export default defineConfig({
         additionalData: `@import "./src/assets/styles/styles.scss";`
       }
     }
-  }
-})
+  },
+}))

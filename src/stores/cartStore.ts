@@ -1,7 +1,7 @@
 import {defineStore} from 'pinia'
 import {ref, computed, watch} from "vue";
-import CartItem from "@/interfaces/cartItemInterface";
-import Item from "@/interfaces/itemInterface";
+import CartItem from "../interfaces/cartItemInterface";
+import Item from "../interfaces/itemInterface";
 
 export const useCartStore = defineStore('cart', () => {
     const cart = ref([] as CartItem[])

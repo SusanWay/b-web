@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {ref, PropType} from 'vue'
 import bPopupItem from './b-popup-item.vue'
-import Item from "@/interfaces/itemInterface";
+import Item from "@/interfaces/itemInterface"
 
 const props = defineProps({
   item: {

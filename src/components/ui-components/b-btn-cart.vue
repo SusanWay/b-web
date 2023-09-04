@@ -22,7 +22,7 @@ const deleteFromCart = () => {
   emits('deleteFromCart', props.item)
 }
 const itemCount = computed(() => {
-  const existingCartItemIndex = cartStore.GET_CART_ITEMS.findIndex(cartItem => cartItem.idSteam === props.item.idSteam)
+  const existingCartItemIndex = cartStore.GET_CART_ITEMS.findIndex(cartItem => cartItem.idSteam === props.item?.idSteam)
 
   if (existingCartItemIndex !== -1) {
     return cartStore.GET_CART_ITEMS[existingCartItemIndex].quantity
