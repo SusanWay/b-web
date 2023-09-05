@@ -2,6 +2,7 @@
 import {ref, computed, onMounted} from 'vue'
 import {useInventoryStore} from "@/stores/inventoryStore"
 import {useCartStore} from "@/stores/cartStore"
+import {sortItemsByType} from "@/utils/Filters/sortItemsByType.ts";
 import Item from "@/interfaces/itemInterface"
 import bItem from '../ui-components/b-item.vue'
 import bBtnCart from '../ui-components/b-btn-cart.vue'
@@ -15,16 +16,16 @@ const props = defineProps({
   selectedType: {
     type: String,
     default() {
-      return ''
+      return 'ALL'
     }
   }
 })
 
-let sortedItems = ref([] as Item[])
 
 const filteredItems = computed(() => {
+  let sortedItems = ref([] as Item[])
   if (props.selectedType !== 'ALL') {
-    sortItemsByType()
+    sortedItems.value = sortItemsByType(inventoryStore.GET_ITEMS, <string>props.selectedType)
     return sortedItems.value
   }
   return inventoryStore.GET_ITEMS
@@ -36,15 +37,6 @@ const addToCart = (data: Item) => {
 
 const deleteFromCart = (data: Item) => {
   cartStore.DELETE_FROM_CART(data)
-}
-
-const sortItemsByType = () => {
-  sortedItems.value = []
-  for (const item of inventoryStore.GET_ITEMS) {
-    if (props.selectedType === item.type) {
-      sortedItems.value.push(item)
-    }
-  }
 }
 
 onMounted(() => {

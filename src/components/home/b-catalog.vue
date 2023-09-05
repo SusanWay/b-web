@@ -3,7 +3,6 @@ import {onMounted} from "vue"
 import {useAccountStore} from "@/stores/accountStore.ts"
 import bCatalogItem from './b-catalog-item.vue'
 
-const a = 123
 
 const accountsStore = useAccountStore()
 

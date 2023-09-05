@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1693894749629" clover="3.2.0">
+  <project timestamp="1693894749629" name="All files">
+    <metrics statements="24" coveredstatements="24" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2" elements="32" coveredelements="32" complexity="0" loc="24" ncloc="24" packages="2" files="2" classes="2"/>
+    <package name="Filters">
+      <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="sortItemsByType.ts" path="C:\Users\Vlad\Desktop\web\b-web\src\utils\Filters\sortItemsByType.ts">
+        <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="12" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="dateFormater">
+      <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="dateFormater.ts" path="C:\Users\Vlad\Desktop\web\b-web\src\utils\dateFormater\dateFormater.ts">
+        <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="4" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
