@@ -3,7 +3,7 @@ export default interface Item {
     "type": string,
     "name": string,
     "cost": number,
-    "float": number,
+    "float"?: number,
     "img": string,
-    "count": number
+    "count"?: number
 }

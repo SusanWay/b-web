@@ -1,5 +1,6 @@
 import {expect, test} from "vitest"
 import {sortItemsByType} from "./sortItemsByType.ts"
+import Item from "../../interfaces/itemInterface.ts";
 
 const testData = [
     {
@@ -9,7 +10,7 @@ const testData = [
         "count": 12,
         "cost": 34.82,
         "img": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsQEl9Jg9SpIW1KgRr7OHFY28SvoyJl4-Fg_L6N77DhSUFsccgie-W9Nqj3gblqhA_NWyiLIfDclA_YFjU_1a7yOfmhcO9vpvA1zI97X4HoaIB"
-    },
+    } as Item,
     {
         "idSteam": 2,
         "type": "weapon",
@@ -17,7 +18,7 @@ const testData = [
         "cost": 2.92,
         "float": 0.49539887,
         "img": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpos7asPwJfwOP3dS9b08u5m4S0n_L1JaKfw20BuMR1jrjAodSk21Dg80JpMDr1dtWQdldrN1jW_wPtl-fq1pO7uoOJlyW7W3BBXg"
-    },
+    }as Item,
     {
         "idSteam": 5,
         "type": "case",
@@ -25,7 +26,7 @@ const testData = [
         "count": 30,
         "cost": 59.54,
         "img": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsQEl9Jg9SpIW1KgRr7PLGZSpH_szkxNLZqPDmPK7BqWhZ6cl9j-fG8J7mxlK1-ks_Zz32I4GdJlJrY1HX-wDrlO3v05e87pmfyXVrvCAj43bemhapwUYbHWM7HMY"
-    },
+    }as Item,
     {
         "idSteam": 6,
         "type": "case",
@@ -33,7 +34,7 @@ const testData = [
         "count": 7,
         "cost": 45.59,
         "img": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXX7gNTPcUhvRpJWF7RTNu-wM7DbEl7KggZs--nLV4ygaDNJztE7ozgzNGIwqTyZ-6AlGpV7Jx10uiQotym2g3k_l0sPT6xjsLSww"
-    }]
+    }as Item]
 
 const testParams = [
     {
