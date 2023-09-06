@@ -10,15 +10,15 @@ const props = defineProps({
     }
   },
   options: {
-    type: Array,
+    type: Array<FilterItemType>,
     default() {
       return [] as FilterItemType[]
     }
   }
 })
 
-const changeOptions = (event) => {
-  emit('changeOptions', event.target.value)
+const changeOptions = (event: Event) => {
+  emit('changeOptions', (event.target as HTMLInputElement).value)
 }
 
 </script>
@@ -29,7 +29,7 @@ const changeOptions = (event) => {
         :value="props.selected"
         @change="changeOptions($event)"
     >
-      <option v-for="option in props.options" :key="option.value" :value="option.value">
+      <option v-for="option of props.options" :key="option.value" :value="option.value">
         {{ option.name }}
       </option>
     </select>

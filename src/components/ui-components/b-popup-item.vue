@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {defineExpose, ref, PropType} from "vue"
+import {ref, PropType} from "vue"
 import Item from "@/interfaces/itemInterface";
 import CartItem from "@/interfaces/cartItemInterface.ts";
 

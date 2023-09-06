@@ -10,7 +10,7 @@ const props = defineProps({
     default: () => ''
   },
   itemType: {
-    type: Array,
+    type: Array<FilterItemType>,
     default: () => [] as FilterItemType[]
   }
 })

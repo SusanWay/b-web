@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {onMounted} from "vue"
-import {useAccountStore} from "@/stores/accountStore"
-import {useInventoryStore} from "@/stores/inventoryStore";
+import {useAccountStore} from "@/stores/accountStore.ts"
+import {useInventoryStore} from "@/stores/inventoryStore.ts";
 import {useRoute} from "vue-router";
 import bAccountProfile from './b-account-profile.vue'
 import bAccountInfo from './b-account-info.vue'

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {computed, ref, PropType} from "vue";
-import {dateFormatter} from '@/utils/dateFormater/dateFormater.js'
-import Account from "@/interfaces/accountInterface";
+import {dateFormatter} from '@/utils/dateFormater/dateFormater.ts'
+import Account from "@/interfaces/accountInterface.ts";
 
 const props = defineProps({
   account: {
