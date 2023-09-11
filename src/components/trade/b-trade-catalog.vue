@@ -46,7 +46,6 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="b-trade-catalog">
     <bItemPlace msg="Предметы доступные для обмена">
       <bItem
           v-for="item in filteredItems"
@@ -60,7 +59,6 @@ onMounted(() => {
         />
       </bItem>
     </bItemPlace>
-  </div>
 </template>
 
 <style lang="scss">

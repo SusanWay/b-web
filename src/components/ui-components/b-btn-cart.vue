@@ -43,7 +43,7 @@ const itemCount = computed(() => {
     <div v-else-if="itemCount === props.item?.count && item.type === 'case'" class="multu-сhoice">
       <a @click="deleteFromCart">
         <p>
-          --
+          –
         </p>
       </a>
       <span>

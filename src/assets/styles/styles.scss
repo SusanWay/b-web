@@ -48,7 +48,6 @@ span {
 }
 
 .b-trade-cart,
-.b-trade-catalog,
 .b-account-info,
 .b-account-inventory,
 .b-account-profile {
@@ -57,7 +56,7 @@ span {
   background-color: $main-bg-light;
 }
 
-.b-trade-cart, .b-trade-catalog {
+.b-trade-cart{
   width: $b-trade-case-widht;
 }
 
@@ -65,7 +64,7 @@ span {
   width: $b-account-case-width;
 }
 
-.b-trade-cart, .b-trade-catalog {
+.b-trade-cart{
   height: 700px;
 }
 
