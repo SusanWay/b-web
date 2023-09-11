@@ -110,14 +110,14 @@ span {
   background-color: $main-bg-inventory-btn-hover;
 }
 
-.b-item a p,
+.b-btn a p,
 .b-catalog-item_element_btn,
 .b-trade-item_element_btn p {
   text-decoration: none;
   text-align: center;
 }
 
-.b-item a p {
+.b-btn a p {
   border-radius: 5px;
   background-color: $main-bg-inventory-btn-hover;
   font-size: 16px;
@@ -125,15 +125,15 @@ span {
   padding: $padding * 0.25;
 }
 
-.b-item:hover a p {
+.b-item:hover .b-btn a p {
   background-color: $main-bg-hover;
 }
 
-.b-item a p:hover {
+.b-item:hover .b-btn a p:hover {
   background-color: #aba0e7;
 }
 
-.b-item a {
+.b-btn a {
   cursor: pointer;
 }
 

@@ -2,6 +2,7 @@
 import {ref, PropType} from "vue"
 import Item from "@/interfaces/itemInterface";
 import CartItem from "@/interfaces/cartItemInterface.ts";
+import bLink from './b-link.vue'
 
 const props = defineProps({
   item: {
@@ -32,16 +33,27 @@ defineExpose({
     <div class="popup">
       <div class="popup-content">
         <div class="popup-content-img">
-          <img :src="props.item?.img">
+          <img :src="props.item?.img" alt="">
+          <div class="popup-content-img-btn">
+            <bLink></bLink>
+            <bLink></bLink>
+            <bLink></bLink>
+          </div>
         </div>
         <div class="popup-content-text">
-          <h1>{{ props.item.name }}</h1>
+          <p> Береты / Factory New</p>
+          <p class="popup-main-text">{{ props.item.name }} (Factory New)</p>
           <div>
-            <p>text text</p>
-            <p>text text</p>
-            <p>text text</p>
-            <p>text text</p>
-            <p>text text</p>
+            <div class="popup-main-text-li">
+              <p>Рекомендуемая цена:</p>
+              <p>50.32</p>
+            </div>
+          </div>
+          <div>
+            <div class="popup-main-text-li">
+              <p>Цена:</p>
+              <p>{{props.item.cost}}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -49,7 +61,7 @@ defineExpose({
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .popup {
   top: 50px;
   padding: $padding * 3;
@@ -59,12 +71,6 @@ defineExpose({
   background-color: $main-bg-light;
   border-radius: $radius;
   width: $b-popup-container-width;
-}
-
-.popup h1 {
-  text-align: center;
-  margin: 0;
-  color: white;
 }
 
 .backdrop {
@@ -82,8 +88,8 @@ defineExpose({
 }
 
 .popup-content-img img {
-  height: 500px;
-  width: 680px;
+  height: 340px;
+  width: 480px;
 }
 
 .popup-content-text {
@@ -92,7 +98,8 @@ defineExpose({
 
 .popup-content-text div {
   background-color: $main-bg-inventory-btn;
-  padding: $padding * 3;
+  padding: $padding;
+  margin: $margin 0;
   text-align: justify;
 }
 
@@ -102,4 +109,26 @@ defineExpose({
   padding: $padding;
   border-radius: $radius;
 }
+
+.popup-main-text,
+.popup-content-text p,
+{
+  margin: $margin * 0.5 0;
+}
+
+.popup-main-text{
+  font-size: 20px;
+}
+
+.popup-main-text-li,
+.popup-content-img-btn{
+  display: flex;
+}
+
+.popup-main-text-li{
+  justify-content: space-between;
+  padding: 0;
+}
+
+
 </style>

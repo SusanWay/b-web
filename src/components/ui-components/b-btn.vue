@@ -3,13 +3,15 @@
 </script>
 
 <template>
-  <a>
-    <p>
-      market
-    </p>
-  </a>
+  <div class="b-btn">
+    <a>
+      <p>
+        market
+      </p>
+    </a>
+  </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 
 </style>

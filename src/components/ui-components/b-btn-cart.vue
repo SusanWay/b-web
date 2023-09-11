@@ -33,7 +33,7 @@ const itemCount = computed(() => {
 </script>
 
 <template>
-  <div>
+  <div class="b-btn">
     <a class="standart-btn" v-if="itemCount === 0" @click="addToCart">
       <p>Обмен</p>
     </a>
