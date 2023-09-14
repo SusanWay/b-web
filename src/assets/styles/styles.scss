@@ -2,6 +2,8 @@
 
 * {
   color: white;
+  border: 0;
+  border-radius: 0;
 }
 
 *::-webkit-scrollbar {
@@ -65,11 +67,11 @@ span {
 }
 
 .b-trade-cart{
-  height: 700px;
+  height: 504px;
 }
 
 .b-trade-inventory {
-  height: 580px;
+  height: 404px;
   padding: 20px;
 }
 

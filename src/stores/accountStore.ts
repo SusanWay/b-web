@@ -39,11 +39,20 @@ export const useAccountStore = defineStore('accounts', () => {
         }
     }
 
+    const GET_ACCOUNTS_FOR_FILTER = computed(() =>{
+        const result = [{name: 'Не выбран', value: 'None'}]
+        for(const account of accountsList.value){
+            result.push({name: account.name, value: account.idSteam})
+        }
+        return result
+    })
+
     return {
         GET_ACCOUNTS,
         GET_CURRENT_ACCOUNT:
         GET_ACCOUNT_CURRENT,
         GET_ACCOUNTS_FROM_API,
         GET_ACCOUNT_CURRENT_FROM_API,
+        GET_ACCOUNTS_FOR_FILTER
     }
 })

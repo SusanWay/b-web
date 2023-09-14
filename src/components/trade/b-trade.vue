@@ -1,23 +1,36 @@
 <script setup lang="ts">
-import {ref} from "vue";
+import {onMounted, ref} from "vue"
+import {useAccountStore} from "@/stores/accountStore.ts"
 import bTradeCart from './b-trade-cart.vue'
 import bTradeBtn from './b-trade-btn.vue'
 import bTradeFilters from './b-trade-filters.vue'
 import bTradeCatalog from './b-trade-catalog.vue'
+import bAccSelectPlace from '../ui-components/b-acc-selecect-place.vue'
 
-let selectedType = ref('ALL')
+const accountStore = useAccountStore()
 
+const selectedType = ref('ALL')
 const itemType = ref([{name: 'Все', value: 'ALL'}, {name: 'Кейсы', value: 'case'}, {name: 'Оружие', value: 'weapon'}])
 
-let changeOptions = (type:string) => {
+const changeOptions = (type:string) => {
   selectedType.value = type
 }
+
+onMounted(() => {
+  accountStore.GET_ACCOUNTS_FROM_API()
+})
 
 </script>
 
 <template>
   <div class="b-trade">
-    <bTradeCart/>
+    <div>
+      <bAccSelectPlace
+          msg="Выберите аккаунт для передачи предметов"
+          :accounts="accountStore.GET_ACCOUNTS_FOR_FILTER"
+      />
+      <bTradeCart/>
+    </div>
     <div>
       <bTradeBtn/>
       <bTradeFilters
@@ -26,9 +39,14 @@ let changeOptions = (type:string) => {
           @changeOptions="changeOptions"
       />
     </div>
-    <bTradeCatalog
-        :selectedType="selectedType"
-    />
+    <div>
+      <bAccSelectPlace
+          msg="Выберите аккаунт для передачи предметов"
+      />
+      <bTradeCatalog
+          :selectedType="selectedType"
+      />
+    </div>
   </div>
 </template>
 
